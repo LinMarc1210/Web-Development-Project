@@ -1,0 +1,293 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #97baa4;
+}
+div {
+    position: relative;
+}
+
+/* 以下是 nav 的 css */
+#top {
+    clear: both;
+}
+.nav {  
+    display: flex;
+    justify-content: space-evenly; /* 間隔相等 */
+}
+nav a {
+    color: inherit; /* 移除超連結顏色（繼承上層元素的顏色） */
+    text-decoration: none; /* 移除超連結底線 */
+    display: block; /* 從 inline 元素改成 block 層級元素 */
+    padding: 10px;
+}
+nav a:hover {
+    transition: 0.5s;
+    background-color: #232941;
+    color:white;
+}
+nav > ul {
+    list-style: none;
+    background-color: darkslategrey;
+    color: wheat;
+    font: 16px consolas;
+}
+/* 到這邊結束 */
+
+#olympic_ad {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;       /* 溢出的圖片裁切掉 */
+}
+#olympic_ad img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    display: none;          /* 隱藏圖片。輪播開始時，只顯示第一張圖片，而其他圖片則隱藏起來。 */
+    z-index: 1;
+}
+#olympic_ad #highlight {
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: flex;          /* 這個不隱藏，而且要重疊上去 */
+    z-index: 10;
+    opacity: 0.8;
+}
+
+#news, #news iframe {
+    width: 600px;
+    height: 400px;
+    float: left;
+}
+
+.intro {
+    margin-left: 50%;
+}
+.intro p {
+    font: 28px consolas;
+    color: #232941;
+}
+
+/* 獎牌顯示 */
+.medals {
+    position: relative;
+}
+.medals table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font: 48px consolas;
+    color: azure;
+    white-space: nowrap;
+    z-index: 2;
+}
+.medals table tr td, .medals table tr th{
+    text-align: left;
+    font-weight: 1000;
+    padding: 20px;
+}
+.medals table tr .gold:hover{
+    transition: 0.5s;
+    color: gold;
+}
+.medals table tr .silver:hover{
+    transition: 0.5s;
+    color: silver;
+}
+.medals table tr .bronze:hover{
+    transition: 0.5s;
+    color: #CD7F32;
+}
+.medals table tr td:hover, .medals table tr th:hover{
+    transition: 0.5s;
+    color: #232941;
+}
+.medals img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.8;
+}
+/**/
+
+/* 運動項目 icon 特效*/
+.sports {
+    position: relative;
+    width: 100%;
+    height: 800px;       /* 要有明確高度，子元素才能用百分比 */
+}
+.sports #allsports {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    z-index: 1;
+}
+.sports .pictogram {
+    transition: 1s ease-in;
+    position: absolute;
+    width: 7.5%;
+    height: 13%;
+    opacity: 0;
+    z-index: 2;
+}
+.sports .pictogram:hover {
+    transition: 1s ease-out;
+    opacity: 1;
+    z-index: 2;
+}
+#archery {
+    top: 12.5%;
+    left: 4.4%;
+}
+#archery {
+    top: 12.5%;
+    left: 4.4%;
+}
+#badminton {
+    top: 12.5%;
+    left: 41.5%;
+}
+#boxing {
+    top: 28.5%;
+    left: 4.4%;
+}
+#golf {
+    top: 45%;
+    left: 32.25%;
+}
+#gymnastic {
+    top: 12.5%;
+    left: 13.75%;
+}
+#judo {
+    top: 45%;
+    left: 60.25%;
+}
+#table_tennis {
+    top: 61%;
+    left: 78.75%;
+}
+#taekwondo {
+    top: 61%;
+    left: 88%;
+}
+#weightlifting {
+    top: 77.5%;
+    left: 64.75%;
+}
+/**/
+
+/* 文化奧運台灣館 */
+.taiwan {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+.taiwan img {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    z-index: 1;
+}
+
+
+/* 作者介紹 */
+#producer-container {
+    position: relative;
+    border: none;
+    background-color: black;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+#text {
+    position: absolute;
+    width: 10%;
+    top: 3%;
+    left: 3%;
+    animation: popleft 1.5s linear forwards;
+}
+#l_text {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    font: 24px consolas;
+    opacity: 0;
+    color: white;
+    animation: floattext 1s linear 1.5s forwards;
+}
+#y_text {
+    position: absolute;
+    top: 70%;
+    right: 25%;
+    font: 24px consolas;
+    opacity: 0;
+    color: white;
+    animation: floattext 1s linear 1.5s forwards;
+}
+#linmarc {
+    position: absolute;
+    border: gray inset 1px;
+    width: 25%;
+    border-radius: 50%;
+    top: 20%;
+    left: 15%;
+    animation: floatup 1.5s linear forwards;
+}
+#y1tzuu {
+    position: absolute;
+    border: gray inset 1px;
+    width: 25%;
+    border-radius: 50%;
+    top: 20%;
+    right: 15%;
+    animation: floatup 1.5s linear forwards;
+}
+@keyframes floatup{
+    0%   {top:100%; opacity: 0.1;}
+    25%  {top:80%;  opacity: 0.3;}
+    50%  {top:60%;  opacity: 0.5;}
+    75%  {top:40%;  opacity: 0.7;}
+    100% {top:20%;  opacity: 1.0;}
+}
+@keyframes popleft{
+    0%   {left: -50%; opacity: 0.2;}
+    25%  {left: -37%; opacity: 0.4;}
+    50%  {left: -24%; opacity: 0.6;}
+    75%  {left:-11%;  opacity: 0.8;}
+    100% {left: 3%;   opacity: 1.0;}
+}
+@keyframes floattext {
+    0%   {opacity: 0.2;}
+    25%  {opacity: 0.4;}
+    50%  {opacity: 0.6;}
+    75%  {opacity: 0.8;}
+    100% {opacity: 1.0;}
+}
+/**/
+
+/* 右下角回頁面上方 */
+.scroll_back{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;          /* 一定會顯示出來 */
+}
+.scroll_back a{
+    color: inherit;
+    text-decoration: none;
+    padding: 10px;
+    size: 40px;
+}
+/**/
