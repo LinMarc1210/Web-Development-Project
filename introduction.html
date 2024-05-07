@@ -2,9 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>History</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="introduction_style.css">
+    <script src="introduction.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body >
     <!--等index的nav加入，這邊先大致用個div代替-->
     <div id="top">
@@ -19,31 +22,91 @@
             </ul>
         </nav>
     </div>
+
     
+    <div id="content">
+    <!--第一段(奧林匹克運動會)-->
     <h2>奧林匹克運動會-歷史</h2>
-    <hr>
-    <img src="src/奧運logo.png" alt="奧運logo" id="olympic_logo">
-    <p>奧林匹克運動會，簡稱奧運會、奧運，
-        是世界最高等級的國際綜合體育賽事，由國際奧林匹克委員會主辦，每4年舉行一次。冬季競技項目創立冬季奧林匹克運動會後，之前的奧林匹克運動會則是又稱為「夏季奧林匹克運動會」以示區分。
-        從1994年起，冬季奧運會和夏季奧運會分開，相隔2年交替舉行。
-        奧林匹克運動會最早起源於古希臘，是當時各城邦之間的公開較量，因為舉辦地在奧林匹亞而得名。信奉基督教的羅馬皇帝狄奧多西一世以奧林匹克運動會崇拜耶穌以外神衹為由，禁止奧運競技，於是奧運在舉辦超過1,000年後於4世紀末停辦，奧運這次停辦持續了1,503年，直到19世紀末才由後人發現遺蹟。
+        <p>奧林匹克運動會，奧運，世界最高等級的國際綜合體育賽事，由國際奧林匹克委員會主辦，每4年舉行一次。從1994年起，冬季奧運會和夏季奧運會分開，相隔2年交替舉行。
+        奧林匹克運動會最早起源於古希臘，是當時各城邦之間的公開較量，因為舉辦地在奧林匹亞而得名。信奉基督教的羅馬皇帝狄奧多西一世以奧林匹克運動會崇拜耶穌以外神衹為由，禁止奧運競技，於是奧運在舉辦超過1,000年後於4世紀末停辦，直到19世紀末才由後人發現遺蹟。
         之後，法國的顧拜旦男爵皮耶·德·古柏坦創立了有真正奧運精神的現代奧林匹克運動會，自1896年開始每4年舉辦一次，更確立了會期不超過18日的傳統。
-        現代奧運會只在兩次世界大戰期間合共中斷過5次（分別是1916年夏季奧運會、1940年夏季奧運會、1940年冬季奧運會、1944年夏季奧運會和1944年冬季奧運會），以及在2020年因嚴重特殊傳染性肺炎大流行延期過一次</p>
-    <h2>現代奧運</h2>
-    <hr>
-    <ul>
-        <li>夏季奧林匹克運動會</li>
-        <li>冬季奧林匹克運動會</li>
-        <li>夏季青年奧林匹克運動會</li>
-        <li>冬季青年奧林匹克運動會</li>
-    </ul>
-    <h2>上一屆:東京奧運</h2>
-    <hr>
-    <img src="src/Miraitowa.jpg" alt="東京奧運吉祥物" id="Miraitowa">
-    <table border="1" id="score_table">
-        <caption><b>東京奧運成績-創新紀錄</b></caption>
+        現代奧運會只在兩次世界大戰期間合共中斷過5次，以及在2020年因嚴重特殊傳染性肺炎大流行延期過一次</p>
+
+    <!--第四段(巴黎奧運)-->
+    <h2 style="clear: both;">今年2024:巴黎奧運</h2>
+    <br>
+
+    <!--嵌入影片後會有cookie錯誤的問題-->
+    <div id="olympic_video"><iframe  width="560" height="315" src="https://www.youtube.com/embed/eGyBTSqCiXA?si=oUiIvEN_3yDy3uLl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <h3>3大亮點：</h3>
+    <div id="picture_div">
+        <img src="src/introduction/paris_olympic_2.jpg" alt="巴黎鐵塔">
+        <img src="src/introduction/paris_olympic_3.jpg" alt="戰神廣場">
+        <img src="src/introduction/phryges.png" alt="phryges">
+    </div>
+    <br>
+    <table id="introduction">
         <tr>
-            <th>金牌</th><td>&nbsp;&nbsp;2&nbsp;&nbsp;</td>
+            <td>本屆巴黎奧運承襲東奧「環保減碳」理念，奧委會打破傳統，
+                使用城市現有的體育場館，並在各個巴黎地標旁搭建臨時場地，包含菲爾鐵塔前的耶拿橋、戰神廣場，還有巴黎大皇宮、凡爾賽宮！</td>
+            <td>巴奧這回史無前例把開幕式搬離主場館，移師塞納河舉行！不僅各國選手將會搭乘船隻出場，也是觀眾首次能現場參觀開幕典禮</td>
+            <td>弗里吉 Phryge 採用源自法國國旗的藍、白、紅三色，胸前鑲嵌金色 2024 巴黎會徽。設計靈感源自象徵自由的「弗里吉亞帽 Phrygian cap」
+                ，又稱「自由之帽」，是法國大革命的重要象徵</td>
+        </tr>
+    </table>
+    <h3>中華台北看點：</h3>
+    <div class="taiwan_introduction">
+        <img src="src/introduction/左箭頭.png" onclick="cot=pre(cot, '.list', '.photo')" class="button" alt="">
+        <div class="box">
+            <div class="list">
+                <div class="photo"><img src="src/introduction/戴資穎.jpg"></div>
+                <div class="photo"><img src="src/introduction/戴資穎2.jpg"></div>
+                <div class="photo"><img src="src/introduction/戴資穎3.jpg"></div>
+                <div class="photo"><img src="src/introduction/戴資穎4.jpg"></div>
+                <div class="photo"><img src="src/introduction/戴資穎5.jpg"></div>
+            </div>
+        </div>
+    <img src="src/introduction/右箭頭.png" onclick="cot=nex(cot, '.list', '.photo')" class="button" alt="">
+        <div class="taiwan_content">奧運最後一舞 <br>戴資穎：「就是打到2024年底的賽季結束，就算那時候還能打，我也想要休息了。」</div>
+    </div>
+
+    <div class="taiwan_introduction">
+        <div class="taiwan_content">巴黎奧運很可能是「麟洋配」最後一次搭檔！ <br>李洋曾在訪問對戴資穎退休一事做出回應，表示自己也不遠了！</div>
+        <img src="src/introduction/左箭頭.png" onclick="cot2=pre(cot2, '.list2', '.photo2')" class="button" alt="">
+        <div class="box">
+            <div class="list2">
+                <div class="photo2"><img src="src/introduction/麟洋.jpg"></div>
+                <div class="photo2"><img src="src/introduction/麟洋2.jpg"></div>
+                <div class="photo2"><img src="src/introduction/麟洋3.jpg"></div>
+                <div class="photo2"><img src="src/introduction/麟洋4.jpg"></div>
+                <div class="photo2"><img src="src/introduction/麟洋5.jpg"></div>
+            </div>
+        </div>
+    <img src="src/introduction/右箭頭.png" onclick="cot2=nex(cot2, '.list2', '.photo2')" class="button" alt="">
+    </div>
+
+    <div class="taiwan_introduction">
+        <img src="src/introduction/左箭頭.png" onclick="cot3=pre(cot3, '.list3', '.photo3')" class="button" alt="">
+        <div class="box">
+            <div class="list3">
+                <div class="photo3"><img src="src/introduction/桌球教父.jpg"></div>
+                <div class="photo3"><img src="src/introduction/桌球教父2.jpg"></div>
+                <div class="photo3"><img src="src/introduction/桌球教父3.jpg"></div>
+                <div class="photo3"><img src="src/introduction/桌球教父4.jpg"></div>
+                <div class="photo3"><img src="src/introduction/桌球教父5.jpg"></div>
+            </div>
+        </div>
+    <img src="src/introduction/右箭頭.png" onclick="cot3=nex(cot3, '.list3', '.photo3')" class="button" alt="">
+        <div class="taiwan_content">今年奧運很可能會是「桌球教父」的最後一舞 <br>台灣老將莊智淵曾在訪談中表達了巴黎奧運的參戰意願，更聲稱人生不該設限！</div>
+    </div>
+    
+    <!--第三段(上一屆:東京奧運)-->
+    <h2>上一屆:東京奧運</h2>
+    <img src="src/introduction/Miraitowa.png" alt="東京奧運吉祥物" id="Miraitowa" onclick="change_Miraitowa()">
+    <table id="score_table">
+        <caption><b>東京奧運成績-創新紀錄</b></caption>
+        <tr id="gold">
+            <th colspan="2">&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;</th>
             <td>
                 <ul>
                     <li>舉重女子59公斤級：郭婞淳</li>
@@ -51,8 +114,8 @@
                 </ul>
             </td>
         </tr>
-        <tr>
-            <th>銀牌</th><td>&nbsp;&nbsp;4&nbsp;&nbsp;</td>
+        <tr id="silver">
+            <th colspan="2">4</th>
             <td>
                 <ul>
                     <li>柔道男子60公斤(含)以下級：楊勇緯</li>
@@ -62,8 +125,8 @@
                 </ul>
             </td>
         </tr>
-        <tr>
-            <th>銅牌</th><td>&nbsp;&nbsp;6&nbsp;&nbsp;</td>
+        <tr id="copper">
+            <th colspan="2">6</th>
             <td>
                 <ul>
                     <li>桌球混合雙打：林昀儒、鄭怡靜</li>
@@ -76,24 +139,8 @@
             </td>
         </tr>
     </table>
-    <h2 style="clear: both;">今年2024:巴黎奧運</h2>
-    <hr>
-    <h3>3大看點：</h3>
-    <div id="picture_div">
-        <img src="src/paris_olympic_2.webp" alt="巴黎鐵塔">
-        <img src="src/paris_olympic_3.webp" alt="戰神廣場">
-        <img src="src/phryges.png" alt="phryges">
+    <span id="here" style="float: right;"></span>
     </div>
-    <br>
-    <table id="introduction">
-        <tr>
-            <td>本屆巴黎奧運將承襲東奧「環保減碳」理念，奧委會決定打破傳統不蓋新場館，
-                而是大量使用城市現有的體育場館，並在各個巴黎地標旁搭建臨時場地，包含菲爾鐵塔前的耶拿橋、戰神廣場，還有巴黎大皇宮、凡爾賽宮！</td>
-            <td>巴奧這回史無前例把開幕式搬離主場館，移師塞納河舉行！不僅各國選手將會搭乘船隻出場，也是觀眾首次能現場參觀開幕典禮</td>
-            <td>弗里吉 Phryge 採用源自法國國旗的藍、白、紅三色，胸前鑲嵌金色 2024 巴黎會徽。設計靈感源自象徵自由的「弗里吉亞帽 Phrygian cap」
-                ，又稱「自由之帽」，是法國大革命的重要象徵</td>
-        </tr>
-    </table>
-    <h3>中華台北亮點：</h3>
+    <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
 </body>
 </html>

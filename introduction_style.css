@@ -1,0 +1,179 @@
+/*body以下所有內容用一個div去包，來控制margin*/
+#content{    
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+/*nav 放在此div外*/
+
+
+body{
+    background-color: #97baa4;
+    font: 20px consolas;
+    color: #232941;
+    font-weight: 500;
+}
+h2{
+    background-color: wheat;
+    color: darkslategrey;
+    padding: 5px;
+    border-radius: 10px;
+}
+p{
+    padding: 20px;
+    background-image: url(src/introduction/olympic_background2.jpg);
+    height: 290px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font: 18px consolas;
+    border-radius: 10px;
+}
+
+
+#Miraitowa{
+    width: 40%;
+    position: relative;
+    top: 30px;
+}
+#introduction td{
+    padding: 10px;
+    width: 33%;
+    border-radius: 10px;
+    background-color: rgb(62, 104, 104);
+    color: rgb(238, 220, 187);
+    transition: 2s;
+}
+#introduction td:hover{
+    color: rgb(62, 104, 104);
+    background-color: rgb(238, 220, 187);
+}
+#picture_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#picture_div img{
+    width: 30%;
+}
+#olympic_video{
+    display: flex;
+    justify-content: center;
+}
+#dai , #two_boys{
+    width: 400PX;
+    border-radius: 30px;
+}
+
+.taiwan_content{
+    width: 40%;
+    font-weight: 600;
+}
+.taiwan_introduction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*以下調整獎牌table*/
+#score_table {
+    width: 50%;
+    margin-bottom: 20px;
+    float: right;
+    border-collapse: collapse;
+}
+#score_table caption{
+    background-color: wheat;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#score_table th{
+    font-size: 25px;
+    font-family: Courier;
+    font-weight: 600;
+}
+#gold{
+    background-image: url(src/introduction/gold.jpg);
+    filter: saturate(50%);  /*把飽和度調低一點，不然很突兀*/
+}
+#silver{
+    background-image: url(src/introduction/silver.jpg);
+    filter: saturate(80%);
+}
+#copper{
+    background-image: url(src/introduction/copper.jpg);
+    filter: saturate(80%);
+}
+/*到這裡結束*/
+
+/*以下是控制輪播*/
+
+.box{
+    width: 400px;
+    height: 225px; 
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 30px;
+}
+.list,.list2,.list3{
+    margin: 0;
+}
+.photo,.photo2,.photo3{
+    width: 400px;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    float: left;
+    
+}
+.local{
+    top: 20px;
+    position: relative;
+    left: 45%;
+}
+.button {
+    display: inline;
+    font-size: 3rem;
+    cursor: pointer;
+}
+/*到這裡結束*/
+
+/* 以下是 nav 的 css */
+
+body .nav {
+    margin-left: 0%;
+    margin-right: 0%;
+    display: flex;
+    justify-content: space-evenly; /* 間隔相等 */
+}
+nav a {
+    color: inherit; /* 移除超連結顏色（繼承上層元素的顏色） */
+    text-decoration: none; /* 移除超連結底線 */
+    display: block; /* 從 inline 元素改成 block 層級元素 */
+    padding: 10px;
+}
+nav a:hover {
+    transition: 0.5s;
+    background-color: rgb(72, 120, 72);
+    color:white;
+}
+nav > ul {
+    list-style: none;
+    background-color: darkslategrey;
+    color: wheat;
+    font: 16px consolas;
+}
+/* 到這邊結束 */
+
+/* 右下角回頁面上方 */
+.scroll_back{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;          /* 一定會顯示出來 */
+}
+.scroll_back a{
+    color: inherit;
+    text-decoration: none;
+    padding: 10px;
+    size: 40px;
+}
+/**/
