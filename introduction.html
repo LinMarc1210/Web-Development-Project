@@ -15,25 +15,35 @@
             <ul class="nav">
                 <li id="home"><a href="index.html">Home</a></li>
                 <li id="introduction"><a href="introduction.html">Introduction</a></li>
-                <li id="badminton"><a href="#">Badminton</a></li>
+                <li id="badminton"><a href="sport.html">Sports</a></li>
                 <li id="table_tennis"><a href="#">Table Tennis</a></li>
                 <li id="taekwondo"><a href="#">Taekwondo</a></li>
                 <li id="swimming"><a href="#">Swimming</a></li>
             </ul>
         </nav>
+        <label for="sideMenu--active" class="line"><div class="menu"></div></label>
     </div>
 
-    
+    <input type="checkbox" name="" id="sideMenu--active">
+    <!-- 使用 checkbox 來做開關 -->
+    <div class="sideMenu">
+        <nav>
+            <a href="#奧林"  class="fas">奧運-歷史</a>
+            <a href="#2024"  class="fas">今年2024:巴黎奧運</a>
+            <a href="#tokyo_olympic"  class="fas">上一屆:東京奧運</a>
+        </nav>
+    </div>
+
     <div id="content">
     <!--第一段(奧林匹克運動會)-->
-    <h2>奧林匹克運動會-歷史</h2>
+    <h2 id="奧林">奧林匹克運動會-歷史</h2>
         <p>奧林匹克運動會，奧運，世界最高等級的國際綜合體育賽事，由國際奧林匹克委員會主辦，每4年舉行一次。從1994年起，冬季奧運會和夏季奧運會分開，相隔2年交替舉行。
         奧林匹克運動會最早起源於古希臘，是當時各城邦之間的公開較量，因為舉辦地在奧林匹亞而得名。信奉基督教的羅馬皇帝狄奧多西一世以奧林匹克運動會崇拜耶穌以外神衹為由，禁止奧運競技，於是奧運在舉辦超過1,000年後於4世紀末停辦，直到19世紀末才由後人發現遺蹟。
         之後，法國的顧拜旦男爵皮耶·德·古柏坦創立了有真正奧運精神的現代奧林匹克運動會，自1896年開始每4年舉辦一次，更確立了會期不超過18日的傳統。
         現代奧運會只在兩次世界大戰期間合共中斷過5次，以及在2020年因嚴重特殊傳染性肺炎大流行延期過一次</p>
 
     <!--第四段(巴黎奧運)-->
-    <h2 style="clear: both;">今年2024:巴黎奧運</h2>
+    <h2 style="clear: both;" id="2024">今年2024:巴黎奧運</h2>
     <br>
 
     <!--嵌入影片後會有cookie錯誤的問題-->
@@ -101,7 +111,7 @@
     </div>
     
     <!--第三段(上一屆:東京奧運)-->
-    <h2>上一屆:東京奧運</h2>
+    <h2 id="tokyo_olympic">上一屆:東京奧運</h2>
     <img src="src/introduction/Miraitowa.png" alt="東京奧運吉祥物" id="Miraitowa" onclick="change_Miraitowa()">
     <table id="score_table">
         <caption><b>東京奧運成績-創新紀錄</b></caption>
