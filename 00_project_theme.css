@@ -1,22 +1,33 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     background-color: #97baa4;
     overflow-x: hidden;
 }
-#all_content{
-    position: absolute;
-    top: 100px;
-    width: 99%;
+/* div {
+    position: relative;
+} */
+
+/* 右下角回頁面上方 */
+.scroll_back{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;          /* 一定會顯示出來 */
 }
+.scroll_back a{
+    color: inherit;
+    text-decoration: none;
+    padding: 10px;
+    size: 40px;
+}
+/**/
 
 /* 以下是 nav 的 css */
-/* #top {
-    clear: both;
-} */
-.nav {
+body .nav {
+    margin-left: 0%;
+    margin-right: 0%;
     display: flex;
     justify-content: space-evenly; /* 間隔相等 */
 }
@@ -34,7 +45,7 @@ nav a:hover {
 nav > ul {
     list-style: none;
     background-color: darkslategrey;
-    color: wheat;
+    color: wheat; 
     font: 16px consolas;
 }
 /* 到這邊結束 */
@@ -43,7 +54,6 @@ nav > ul {
 a {
     text-decoration: none;
 }
-
 .sideMenu {
     width: 170px;
     height: 100%;
@@ -101,8 +111,8 @@ nav {
     position: absolute;
     z-index: 2;
     top: 15px;
-  }
-  .line .menu, .line .menu::before, .line .menu::after {
+}
+.line .menu, .line .menu::before, .line .menu::after {
     background: white;
     content: "";
     display: block;
@@ -110,123 +120,19 @@ nav {
     position: absolute;
     transition:  ease 0.15s, top ease 0.15s 0.15s, transform ease 0.15s;
     width: 20px;
-  }
-  .line .menu {
+}
+.line .menu {
     left: 18px;
     top: 27px;
-  }
-  .line .menu::before {
+}
+.line .menu::before {
     top: -6px;
-  }
-  .line .menu::after {
+}
+.line .menu::after {
     top: 6px;
-  }
+}
 
-  .fas{
+.fas{
     font: 16px consolas;
-  }
-  /*到這裡結束*/
-
-  /*badminton*/
-  .badminton_image,.Weightlifting_image{
-    border-radius: 60%;
-    margin: 10px;
-    width: 240px;
-    height: 240px;
-    display: inline-block;
-  }
-  #badminton_imgs,#badminton_introduction,#Weightlifting_imgs,#Weightlifting_introduction{
-    display: flex;
-    justify-content: space-around;
-  }
-  #Badminton{
-    background-color: rgba(255,255,255,0.5);
-  }
-
-  /*badminton到這裡結束*/
-
-  /*CSS for the main interaction*/
-h1{
-    position: relative;
-    left: 50px;
 }
-.accordion > input[type="checkbox"] {
-    position: absolute;
-    left: -100px;
-  }
-  
-  .accordion .content {
-    overflow-y: hidden;
-    height: 0;
-    transition: height 0.3s ease;
-    font-family: Courier;
-    border: #97baa4 3px solid;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .accordion > input[type="checkbox"]:checked ~ .content {
-    height: auto;
-    overflow: visible;
-  }
-  
-  .accordion label,.content p{
-    display: block;
-    position: relative;
-    top: 10px;
-    width: 300px;
-    text-align: center;
-  }
-
-  /**/
-  #Table_Tennis{
-    background-color: rgba(47, 79, 79, 0.5);
-    padding-bottom: 10px;
-  }
-  .table_intro ,.Taekwondo_intro,.Swimming_intro,.Judo_intro{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-  .table_image{
-    width: 360px;
-    height: 240px;
-    border-radius: 10px;
-  }
-
-  /**/
-  #Taekwondo,#Judo{
-    background-color: rgba(255, 255, 255, 0.5);
-    padding-bottom: 10px;
-  }
-  .Taekwondo_image,.Swimming_image,.Judo_image{
-    width: 300px;
-    height: 300px;
-    border-radius: 50% 50% 0 0;
-  }
-  #Swimming,#Weightlifting{
-    background-color: rgba(47, 79, 79, 0.5);
-    padding-bottom: 10px;
-  }
-
-  /* 右下角回頁面上方 */
-.scroll_back{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;          /* 一定會顯示出來 */
-}
-.scroll_back a{
-    color: inherit;
-    text-decoration: none;
-    padding: 10px;
-    size: 40px;
-}
-/**/
-
-
-  
-
-
-  
-  
+/*到這裡結束*/

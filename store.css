@@ -1,0 +1,106 @@
+#all_content{
+    position: absolute;
+    top: 100px;
+    width: 99%;
+}
+
+/* 各廣告的基本框架設定 */
+#firststore {
+    transform: translateY(0px) !important       /* 第一個不用特效 */
+}
+.store {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;       /* 溢出的圖片裁切掉 */
+    transform: translateY(400px);
+    margin-bottom: 10px;
+    opacity: 0.7; /* 初始透明度 */
+    transition: opacity 0.3s ease, transform 0.5s ease; /* 添加淡入效果 */
+}
+.store:hover {
+    opacity: 1;
+}
+.store.float-in {    /* 元素浮入效果 */
+    opacity: 1;
+    transform: translateY(0);
+}
+.store .ad {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+/**/
+
+/* 商店首圖 */
+.store button {
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    width: 20%;
+    text-align: center;
+    background-color: darkslategrey;
+    color: wheat;
+    font: 2vw Consolas; /* 頁面寬度 5% */
+    border-radius: 50px;
+    z-index: 2;
+    opacity: 0.7;
+}
+.store button:hover {
+    opacity: 1;
+}
+.store .mask {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+    animation: shrinkToRight 2s ease-in-out forwards 1s;
+}
+@keyframes shrinkToRight{
+    0%   {right: 0; opacity: 1.0;}
+    100% {right: -100%;  opacity: 0.8;}
+}
+/**/
+
+/* 紀念T的文字說明 */
+.title {
+    position: absolute;
+    background-color: black;
+    width: 25%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.6;
+}
+.text {
+    font: 1.5vw arial;       /* vw 是相對於視窗寬度的大小 */
+}
+.text p {           /* 這邊在縮放會有問題 */
+    position: absolute;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    max-width: 100%;
+    max-height: 50%;        /* 設定邊界，不要超出 div */
+    z-index: 3;
+}
+.text a {
+    display: block; /* 從 inline 元素改成 block 層級元素 */
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 180%;
+    color: white;
+    background-color: transparent;
+    text-decoration: none; /* 移除超連結底線 */
+    z-index: 4;
+}
+@keyframes expand {
+    0% {width: 25%};
+    100% {width: 100%};
+}
+/**/
+

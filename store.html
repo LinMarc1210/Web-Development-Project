@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="00_project_theme.css">
+    <script src="store.js"></script>
+</head>
+<body>
+    <div id="top">
+        <nav id="nav_bar">
+            <ul class="nav">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="introduction"><a href="introduction.html">Introduction</a></li>
+                <li id="sports"><a href="sport.html">Sports</a></li>
+                <li id="store"><a href="store.html">Store</a></li>
+                <li id="taekwondo"><a href="#">Taekwondo</a></li>
+                <li id="swimming"><a href="#">Swimming</a></li>
+            </ul>
+        </nav>
+        <label for="sideMenu--active" class="line"><div class="menu"></div></label>
+    </div>
+
+    <!-- 側拉式選單 -->
+    <input type="checkbox" name="" id="sideMenu--active">
+    <!-- 使用 checkbox 來做開關 -->
+    <div class="sideMenu">
+        <nav>
+            <a href="#Badminton" class="fas">Badminton</a>
+            <a href="#Table_Tennis" class="fas">Table Tennis</a>
+            <a href="#Taekwondo" class="fas">Taekwondo</a>
+            <a href="#Swimming" class="fas">Swimming</a>
+            <a href="#Judo" class="fas"></i>Judo</a>
+            <a href="#Weightlifting" class="fas"></i>Weightlifting</a>
+        </nav>
+    </div>
+
+<div id="all_content">
+    <div class="store" id="firststore">
+        <img class="mask" src="src/store/shop_logo.jpg">
+        <button onclick=" window.location.href='onlinestore.html'; ">Go Shopping</button>
+        <img class="ad" id="shop" src="src/store/shop.jpg" alt="商店首圖">
+    </div>
+
+    <div class="store">
+        <img class="ad" id="yonex" src="src/store/yonex.jpg">
+        <div id="title" class="title" onclick="blurBg()">
+            <div class="text">
+                <p>2024巴黎奧運、帕運將於今年夏季點燃聖火。萬眾矚目的中華代表隊服飾，
+                    將由日本知名品牌YONEX與中華奧會首度合作，專門為中華隊量身打造，力挺台灣運動員進軍最高殿堂、爭取無上榮耀。</p>
+                <a id="button" href="javascript: void(0)" onclick="yonexIntro()">點我看更多</a>
+                <!-- href="javascript: void(0)" 讓這個超連結進行空操作 -->
+            </div>
+        </div>
+    </div>
+
+    <div class="store">
+        <img class="ad" id="newkit" src="src/store/newkit.png" alt="奧運進場服">
+        <div id="title" class="title" onclick="blurBg()">
+            <div class="text">
+                <p>繼上屆東京奧運後，周裕穎再度擔任奧運服裝設計師，這已是他第二次操刀奧運服裝。
+                    這次他集結了全台 8 組具代表性的工藝師傅與紡織廠，以台灣本地的「山、海、城、原」為理念出發，打造了一系列兼具運動機能與永續性的服飾。</p>
+                <a id="button" href="javascript: void(0)" onclick="yonexIntro()">點我看更多</a>
+                <!-- href="javascript: void(0)" 讓這個超連結進行空操作 -->
+            </div>
+        </div>
+    </div>
+
+    <div class="store">
+        <img class="ad" id="bankitem" src="src/store/bankitem.png" alt="銀行商品">
+        <div id="title" class="title" onclick="blurBg()">
+            <div class="text">
+                <p>活動期間刷聯邦Visa信用卡
+                    一般消費累積滿6萬元，
+                    登錄抽Visa2024年巴黎奧運主題旅行袋(5,000名)</p>
+                <a id="button" href="javascript: void(0)" onclick="yonexIntro()">點我看更多</a>
+                <!-- href="javascript: void(0)" 讓這個超連結進行空操作 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
+
+</body>
+</html>

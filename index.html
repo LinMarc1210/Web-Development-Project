@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="00_project_theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     <!--載入 jQuery-->
 </head>
 <body>
@@ -13,20 +14,36 @@
             <ul class="nav">
                 <li id="home"><a href="index.html">Home</a></li>
                 <li id="introduction"><a href="introduction.html">Introduction</a></li>
-                <li id="badminton"><a href="sport.html">Sports</a></li>
-                <li id="table_tennis"><a href="#">Table Tennis</a></li>
+                <li id="sports"><a href="sport.html">Sports</a></li>
+                <li id="store"><a href="store.html">Store</a></li>
                 <li id="taekwondo"><a href="#">Taekwondo</a></li>
                 <li id="swimming"><a href="#">Swimming</a></li>
             </ul>
         </nav>
+        <label for="sideMenu--active" class="line"><div class="menu"></div></label>
+    </div>
+
+    <!-- 側拉式選單 -->
+    <input type="checkbox" name="" id="sideMenu--active">
+    <!-- 使用 checkbox 來做開關 -->
+    <div class="sideMenu">
+        <nav>
+            <a href="#Badminton" class="fas">Badminton</a>
+            <a href="#Table_Tennis" class="fas">Table Tennis</a>
+            <a href="#Taekwondo" class="fas">Taekwondo</a>
+            <a href="#Swimming" class="fas">Swimming</a>
+            <a href="#Judo" class="fas"></i>Judo</a>
+            <a href="#Weightlifting" class="fas"></i>Weightlifting</a>
+        </nav>
     </div>
      
+<div id="all_content">
     <div id="olympic_ad">
-        <img src="src/homepage.png" alt="首頁首圖">
-        <img src="src/homepage2.jpg" alt="首頁首圖">
-        <img src="src/homepage3.jpg" alt="首頁首圖">
-        <img src="src/homepage4.jpg" alt="首頁首圖">
-        <img id="highlight" src="src/highlight.png" alt="首圖標題">
+        <img src="src/home/homepage.png" alt="首頁首圖">
+        <img src="src/home/homepage2.jpg" alt="首頁首圖">
+        <img src="src/home/homepage3.jpg" alt="首頁首圖">
+        <img src="src/home/homepage4.jpg" alt="首頁首圖">
+        <img id="highlight" src="src/home/highlight.png" alt="首圖標題">
     </div>
     <script src="trans.js"></script>
     <!-- 使用幻燈片特效播放 -->
@@ -54,12 +71,12 @@
                 <tr>
                     <th>2012 倫敦 <td class="gold">1 <td class="silver">0 <td class="bronze">1 <td>2
             </table>
-            <img src="src/paris.png" alt="獎牌紀錄背景圖">
+            <img src="src/home/paris.png" alt="獎牌紀錄背景圖">
         </div>
     </div>
     <div>
         <div class="sports">
-            <img id="allsports" src="src/sports.jpg" alt="運動項目">
+            <img id="allsports" src="src/home/sports.jpg" alt="運動項目">
             <img class="pictogram" id="archery" src="src/pictograms/archery.png" alt="運動項目">
             <img class="pictogram" id="badminton" src="src/pictograms/badminton.png" alt="運動項目">
             <img class="pictogram" id="boxing" src="src/pictograms/boxing.png" alt="運動項目">
@@ -72,16 +89,19 @@
         </div>
     </div>
     <div class="taiwan">
-        <img src="src/taiwan.jpg" alt="台灣館">
+        <img src="src/home/taiwan.jpg" alt="台灣館">
     </div>
     <div id="producer-container">
-        <img id="linmarc" src="src/linmarc.png" alt="林本然">
-        <img id="y1tzuu" src="src/y1tzuu.png" alt="陳乙慈">
+        <img id="linmarc" src="src/home/linmarc.png" alt="林本然">
+        <img id="y1tzuu" src="src/home/y1tzuu.png" alt="陳乙慈">
         <p id="l_text">林本然</p>
         <p id="y_text">陳乙慈</p>
-        <img id="text" src="src/producer_text.png" alt="作者標題">
+        <img id="text" src="src/home/producer_text.png" alt="作者標題">
     </div>
+</div>
+
     <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
+
 </body>
 </html>
 

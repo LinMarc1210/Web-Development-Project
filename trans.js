@@ -1,7 +1,3 @@
-// var ad_list = new String("src/team.png,src/homepage2.png")
-// var ad_arr = ad_list.split(",")
-
-// var ad_idx = 0;
 // jQuery，外層選定 $(父容器).each( ... )
 $('#olympic_ad').each(function () {
 
