@@ -68,6 +68,9 @@
 /**/
 
 /* 紀念T的文字說明 */
+.store input {
+    position: absolute;
+}
 .title {
     position: absolute;
     background-color: black;
@@ -75,32 +78,28 @@
     height: 100%;
     z-index: 2;
     opacity: 0.6;
+    transition: width 0.5s ease;
+    display: flex;
 }
 .text {
     font: 1.5vw arial;       /* vw 是相對於視窗寬度的大小 */
 }
 .text p {           /* 這邊在縮放會有問題 */
-    position: absolute;
-    margin-left: 5%;
-    margin-right: 5%;
+    position: fixed;
+    /* margin-top: 20%; */
+    margin-left: 2%;
+    margin-top: 5%;
     color: white;
-    max-width: 100%;
+    max-width: 20%;
     max-height: 50%;        /* 設定邊界，不要超出 div */
     z-index: 3;
 }
-.text a {
-    display: block; /* 從 inline 元素改成 block 層級元素 */
-    position: absolute;
-    margin-left: 5%;
-    margin-top: 180%;
+.text label div{
+    position: fixed;
+    left: 10%;
+    top: 80%;
     color: white;
-    background-color: transparent;
-    text-decoration: none; /* 移除超連結底線 */
     z-index: 4;
-}
-@keyframes expand {
-    0% {width: 25%};
-    100% {width: 100%};
 }
 /**/
 

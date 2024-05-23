@@ -6,6 +6,7 @@
     <title>Store</title>
     <link rel="stylesheet" href="store.css">
     <link rel="stylesheet" href="00_project_theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>     <!--載入 jQuery-->
     <script src="store.js"></script>
 </head>
 <body>
@@ -46,37 +47,37 @@
 
     <div class="store">
         <img class="ad" id="yonex" src="src/store/yonex.jpg">
-        <div id="title" class="title" onclick="blurBg()">
+        <input type="checkbox" id="toggleCheckbox1">
+        <div class="title" onclick="toggleTitle(1)">
             <div class="text">
                 <p>2024巴黎奧運、帕運將於今年夏季點燃聖火。萬眾矚目的中華代表隊服飾，
                     將由日本知名品牌YONEX與中華奧會首度合作，專門為中華隊量身打造，力挺台灣運動員進軍最高殿堂、爭取無上榮耀。</p>
-                <a id="button" href="javascript: void(0)" onclick="yonexIntro()">點我看更多</a>
-                <!-- href="javascript: void(0)" 讓這個超連結進行空操作 -->
+                <label for="toggleCheckbox1" class="button"><div>點我看更多</div></label>
             </div>
         </div>
     </div>
 
     <div class="store">
         <img class="ad" id="newkit" src="src/store/newkit.png" alt="奧運進場服">
-        <div id="title" class="title" onclick="blurBg()">
+        <input type="checkbox" id="toggleCheckbox2">
+        <div class="title" onclick="toggleTitle(2)">
             <div class="text">
                 <p>繼上屆東京奧運後，周裕穎再度擔任奧運服裝設計師，這已是他第二次操刀奧運服裝。
                     這次他集結了全台 8 組具代表性的工藝師傅與紡織廠，以台灣本地的「山、海、城、原」為理念出發，打造了一系列兼具運動機能與永續性的服飾。</p>
-                <a id="button" href="javascript: void(0)" onclick="yonexIntro()">點我看更多</a>
-                <!-- href="javascript: void(0)" 讓這個超連結進行空操作 -->
+                <label for="toggleCheckbox2" class="button"><div>點我看更多</div></label>
             </div>
         </div>
     </div>
 
     <div class="store">
         <img class="ad" id="bankitem" src="src/store/bankitem.png" alt="銀行商品">
-        <div id="title" class="title" onclick="blurBg()">
+        <input type="checkbox" id="toggleCheckbox3">
+        <div class="title" onclick="toggleTitle(3)">
             <div class="text">
                 <p>活動期間刷聯邦Visa信用卡
                     一般消費累積滿6萬元，
                     登錄抽Visa2024年巴黎奧運主題旅行袋(5,000名)</p>
-                <a id="button" href="javascript: void(0)" onclick="yonexIntro()">點我看更多</a>
-                <!-- href="javascript: void(0)" 讓這個超連結進行空操作 -->
+                <label for="toggleCheckbox3" class="button"><div>點我看更多</div></label>
             </div>
         </div>
     </div>
