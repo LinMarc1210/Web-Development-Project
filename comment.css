@@ -1,0 +1,71 @@
+#box{
+    width: 99%;
+    height: 500px;
+    /* 讓底突有透明的效果 */
+    background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(src/comment/bg2.jpg); 
+}
+#box p{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    background-color: rgba(255,255,255,0.25);
+}
+button{
+    width: 60px;
+    padding: 5px;
+    border: none;
+    background-color:rgb(62, 104, 104);
+    color: white;
+}
+button:hover{
+    color:rgb(62, 104, 104);
+    background-color: white;
+}
+#input_content{
+    position: relative;
+    left: 38%;
+}
+label{
+    font-size: 20px;
+}
+.style1{
+    border: 3px solid white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgba(255,255,255,0.5);
+    font-family: consolas;
+    
+}
+.style2{
+    border: 3px solid pink;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgba(255,192,203,0.5);
+    font-family: consolas;
+}
+.style3{
+    border: 3px solid skyblue;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgba(135,206,235,0.5);
+    font-family: consolas;
+}
+.style4{
+    border: 3px solid lightgoldenrodyellow;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgba(250,250,210,0.5);
+    font-family: consolas;
+}
+.style5{
+    border: 3px solid plum;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgba(221,160,221,0.5);
+    font-family: consolas;
+}

@@ -6,7 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="background-color: blue; height: 100px;" ></div>
-    <div style="background-color: palegoldenrod; height: 100px;" ></div>
+    <!-- 輸入框 -->
+    <br>
+    <input type="text" id="comment">
+    <button onclick="upload()">submit</button>
+    <p id="try"></p>
+
+    <script>
+        function upload(){
+            var v = document.getElementById('comment');
+            var p = document.getElementById('try');
+            p.innerHTML = v.value;
+        }
+    </script>
 </body>
 </html>
