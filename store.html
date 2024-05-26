@@ -17,7 +17,7 @@
                 <li id="introduction"><a href="introduction.html">Introduction</a></li>
                 <li id="sports"><a href="sport.html">Sports</a></li>
                 <li id="store"><a href="store.html">Store</a></li>
-                <li id="comment"><a href="comment.html">comment</a></li>
+                <li id="comment"><a href="comment.html">Comment</a></li>
                 <li id="swimming"><a href="#">Swimming</a></li>
             </ul>
         </nav>
@@ -29,12 +29,10 @@
     <!-- 使用 checkbox 來做開關 -->
     <div class="sideMenu">
         <nav>
-            <a href="#Badminton" class="fas">Badminton</a>
-            <a href="#Table_Tennis" class="fas">Table Tennis</a>
-            <a href="#Taekwondo" class="fas">Taekwondo</a>
-            <a href="#Swimming" class="fas">Swimming</a>
-            <a href="#Judo" class="fas"></i>Judo</a>
-            <a href="#Weightlifting" class="fas"></i>Weightlifting</a>
+            <a href="#firststore" class="fas">商店首頁</a>
+            <a href="#store-yonex" class="fas">Yonex 紀念T</a>
+            <a href="#store-taiwan" class="fas">中華隊</a>
+            <a href="#store-bank" class="fas">聯邦銀行</a>
         </nav>
     </div>
 
@@ -45,42 +43,55 @@
         <img class="ad" id="shop" src="src/store/shop.jpg" alt="商店首圖">
     </div>
 
-    <div class="store">
-        <img class="ad" id="yonex" src="src/store/yonex.jpg">
-        <input type="checkbox" id="toggleCheckbox1">
-        <div class="title" onclick="toggleTitle(1)">
-            <div class="text">
-                <p>2024巴黎奧運、帕運將於今年夏季點燃聖火。萬眾矚目的中華代表隊服飾，
-                    將由日本知名品牌YONEX與中華奧會首度合作，專門為中華隊量身打造，力挺台灣運動員進軍最高殿堂、爭取無上榮耀。</p>
-                <label for="toggleCheckbox1" class="button"><div>點我看更多</div></label>
+    <div id="store-yonex">
+        <div class="store">
+            <img class="ad" id="yonex" src="src/store/yonex.jpg">
+            <input type="checkbox" id="toggleCheckbox1">
+            <div class="title" onclick="toggleTitle(1)">
+                <div class="text">
+                    <h2>YONEX <br>2024奧運紀念T</h2>
+                    <p>2024巴黎奧運、帕運將於今年夏季點燃聖火。萬眾矚目的中華代表隊服飾，
+                        將由日本知名品牌YONEX與中華奧會首度合作，專門為中華隊量身打造，力挺台灣運動員進軍最高殿堂、爭取無上榮耀。</p>
+                    <label for="toggleCheckbox1" class="button"><div>點我看更多</div></label>
+                </div>
+                <div class="table-container"></div>
             </div>
         </div>
     </div>
 
-    <div class="store">
-        <img class="ad" id="newkit" src="src/store/newkit.png" alt="奧運進場服">
-        <input type="checkbox" id="toggleCheckbox2">
-        <div class="title" onclick="toggleTitle(2)">
-            <div class="text">
-                <p>繼上屆東京奧運後，周裕穎再度擔任奧運服裝設計師，這已是他第二次操刀奧運服裝。
-                    這次他集結了全台 8 組具代表性的工藝師傅與紡織廠，以台灣本地的「山、海、城、原」為理念出發，打造了一系列兼具運動機能與永續性的服飾。</p>
-                <label for="toggleCheckbox2" class="button"><div>點我看更多</div></label>
+    <div id="store-taiwan">
+        <div class="store">
+            <img class="ad" id="newkit" src="src/store/newkit.png" alt="奧運進場服">
+            <input type="checkbox" id="toggleCheckbox2">
+            <div class="title" onclick="toggleTitle(2)">
+                <div class="text">
+                    <h2>中華台北代表團<br>2024奧運進場服</h2>
+                    <p>繼上屆東京奧運後，周裕穎再度擔任奧運服裝設計師，這已是他第二次操刀奧運服裝。
+                        這次他集結了全台 8 組具代表性的工藝師傅與紡織廠，以台灣本地的「山、海、城、原」為理念出發，打造了一系列兼具運動機能與永續性的服飾。</p>
+                    <label for="toggleCheckbox2" class="button"><div>點我看更多</div></label>
+                </div>
+                <div class="table-container"></div>
             </div>
         </div>
     </div>
 
-    <div class="store">
-        <img class="ad" id="bankitem" src="src/store/bankitem.png" alt="銀行商品">
-        <input type="checkbox" id="toggleCheckbox3">
-        <div class="title" onclick="toggleTitle(3)">
-            <div class="text">
-                <p>活動期間刷聯邦Visa信用卡
-                    一般消費累積滿6萬元，
-                    登錄抽Visa2024年巴黎奧運主題旅行袋(5,000名)</p>
-                <label for="toggleCheckbox3" class="button"><div>點我看更多</div></label>
+    <div id="store-bank">
+        <div class="store">
+            <img class="ad" id="bankitem" src="src/store/bankitem.png" alt="銀行商品">
+            <input type="checkbox" id="toggleCheckbox3">
+            <div class="title" onclick="toggleTitle(3)">
+                <div class="text">
+                    <h2>聯邦銀行<br>刷卡送好禮</h2>
+                    <p>活動期間刷聯邦Visa信用卡
+                        一般消費累積滿6萬元，
+                        登錄抽Visa2024年巴黎奧運主題旅行袋(5,000名)</p>
+                    <label for="toggleCheckbox3" class="button"><div>點我看更多</div></label>
+                </div>
+                <div class="table-container"></div>
             </div>
         </div>
     </div>
+    
 </div>
 
     <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>

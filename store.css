@@ -15,8 +15,7 @@
     overflow: hidden;       /* 溢出的圖片裁切掉 */
     transform: translateY(400px);
     margin-bottom: 10px;
-    opacity: 0.7; /* 初始透明度 */
-    transition: opacity 0.3s ease, transform 0.5s ease; /* 添加淡入效果 */
+    transition: transform 0.5s ease; /* 添加淡入效果 */
 }
 .store:hover {
     opacity: 1;
@@ -46,10 +45,6 @@
     font: 2vw Consolas; /* 頁面寬度 5% */
     border-radius: 50px;
     z-index: 2;
-    opacity: 0.7;
-}
-.store button:hover {
-    opacity: 1;
 }
 .store .mask {
     position: absolute;
@@ -62,8 +57,8 @@
     animation: shrinkToRight 2s ease-in-out forwards 1s;
 }
 @keyframes shrinkToRight{
-    0%   {right: 0; opacity: 1.0;}
-    100% {right: -100%;  opacity: 0.8;}
+    0%   {right: 0;}
+    100% {right: -100%;}
 }
 /**/
 
@@ -73,22 +68,46 @@
 }
 .title {
     position: absolute;
-    background-color: black;
+    background-color: black;    /* 黑色遮罩 */
+    opacity: 0.6;
     width: 25%;
     height: 100%;
     z-index: 2;
-    opacity: 0.6;
     transition: width 0.5s ease;
     display: flex;
 }
+.table-container {
+    display: flex;              /* 讓 div 可以重疊 */
+    /* justify-content: center;    水平置中 */ 
+    align-items: center;        /* 垂直置中 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;           /* 佔右半部70% */
+    height: 100%;
+    pointer-events: none; /* 确保表格不会影响 .text 的点击事件 */
+    font: 1.5vw arial;
+    opacity: 1;
+}
 .text {
     font: 1.5vw arial;       /* vw 是相對於視窗寬度的大小 */
+}
+.text h2 {
+    position: fixed;
+    /* margin-top: 20%; */
+    margin-left: 2%;
+    margin-top: 5%;
+    color: white;
+    max-width: 20%;
+    max-height: 50%;        /* 設定邊界，不要超出 div */
+    z-index: 3;
 }
 .text p {           /* 這邊在縮放會有問題 */
     position: fixed;
     /* margin-top: 20%; */
     margin-left: 2%;
     margin-top: 5%;
+    top: 20%;
     color: white;
     max-width: 20%;
     max-height: 50%;        /* 設定邊界，不要超出 div */
