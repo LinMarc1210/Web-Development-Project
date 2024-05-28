@@ -1,3 +1,8 @@
+#all_content{
+    position: absolute;
+    top: 100px;
+    width: 99%;
+}
 #box{
     width: 99%;
     height: 500px;
@@ -69,3 +74,68 @@ label{
     background-color: rgba(221,160,221,0.5);
     font-family: consolas;
 }
+
+/* 排行榜 */
+#hot{
+    margin-top: 20px;
+    padding: 10px;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url(src/comment/bg3.jpeg); 
+    font-size: 18px;
+}
+#hot h2{
+    text-align: center;
+    font-size: 28px;
+}
+#hot ol{
+    padding: 10px;
+    /* background-color: rgba(255,255,255,0.4); */
+}
+.bar{
+    margin: 10px;
+    width: 8em;
+    border-right-style: solid;
+    border-right-color: rgba(62, 104, 104,1);
+
+}
+@keyframes bar1{
+    from{border-right-width: 0px;}
+    to {border-right-width: 600px;}
+}
+@keyframes bar2{
+    from{border-right-width: 0px;}
+    to {border-right-width: 540px;}
+}
+@keyframes bar3{
+    from{border-right-width: 0px;}
+    to {border-right-width: 450px;}
+}
+@keyframes bar4{
+    from{border-right-width: 0px;}
+    to {border-right-width: 296px;}
+}
+@keyframes bar5{
+    from{border-right-width: 0px;}
+    to {border-right-width: 284px;}
+}
+#dai{
+    animation: bar1 6s ease;
+    border-right-width: 600px;
+}
+#guo{
+    animation: bar2 6s ease;
+    border-right-width: 540px;
+}
+#yung{
+    animation: bar3 6s ease;
+    border-right-width: 450px;
+}
+#zheng{
+    animation: bar4 6s ease;
+    border-right-width: 296px;
+}
+#zhunag{
+    animation: bar5 6s ease;
+    border-right-width: 284px;
+}
+
+

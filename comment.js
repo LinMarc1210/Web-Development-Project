@@ -2,7 +2,7 @@ function upload(){
     var boxWidth = $('#box').width()-100;
     var v = document.getElementById('message').value;
     var ele = $('<span></span>').text(v);
-    // document.getElementById('message').value="";
+    document.getElementById('message').value="";
     var randomInt = Math.floor(Math.random() * (5 - 1 + 1)) + 1;  //新增class樣式，要增加max值
     randomClass = 'style'+randomInt;
     ele.addClass(randomClass);
@@ -44,7 +44,9 @@ function upload(){
     //     });
     // } while (isOverlap);
     
-    var randomHeight = (Math.floor(Math.random() * ( 60- 20 + 1)) + 20)*10;  //max:55 min:15
+    var min=75;
+    var max=115;
+    var randomHeight = (Math.floor(Math.random() * ( max- min + 1)) + min)*10; 
     var randomWidth = (Math.floor(Math.random() * (boxWidth - 1 + 1)));
     
     ele.css({

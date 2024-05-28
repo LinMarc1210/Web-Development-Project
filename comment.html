@@ -25,6 +25,30 @@
         <label for="sideMenu--active" class="line"><div class="menu"></div></label>
     </div>
 
+    <!-- 側拉式選單 -->
+    <input type="checkbox" name="" id="sideMenu--active">
+    <!-- 使用 checkbox 來做開關 -->
+    <div class="sideMenu">
+        <nav>
+            <a href="#hot" class="fas">Ranking</a>
+            <a href="#box" class="fas">message board</a>
+        </nav>
+    </div>
+
+    <div id="all_content">
+    <img src="src/comment/banner.png" width="99%">
+    <!-- 排行榜 -->
+    <div id="hot">
+        <h2>網路聲量熱門選手</h2>
+        <ol class="bar_ol">
+            <li id="dai" class="bar"><b>戴資穎:228,010則</b></li>
+            <li id="guo" class="bar"><b>郭婞淳:204,941則</b></li>
+            <li id="yung" class="bar"><b>楊勇緯:171,172則</b></li>
+            <li id="zheng" class="bar"><b>鄭怡靜:112,722則</b></li>
+            <li id="zhunag" class="bar"><b>莊智淵:107,875則</b></li>
+        </ol>
+    </div>
+
     <!-- 留言板 -->
     <div id="box">
         <p>一起為中華隊加油!</p>
@@ -37,6 +61,8 @@
         <button onclick="upload()">submit</button>
     </span>
     <br><br>
+    </div>
+    
     <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
 </body>
 </html>
