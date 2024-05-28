@@ -8,18 +8,22 @@
     margin: 0 auto;     /* 在父容器（div）裡面水平置中 */
     z-index: 1;
     border: 1px solid black;
+    width: 90%;
 }
 .store table td {
     justify-content: center;
     text-align: center;
     border: 1px solid black;
 }
-.store .t-shirt {
+.store .product {
     padding: 5%;        /* 為了置中 (5 + 90 + 5) */
     width: 90%;
-    height: 200px;
+    height: auto;
     border-radius: 50%;
     z-index: 1;
+    object-fit: cover;
 }
+
+
 
 

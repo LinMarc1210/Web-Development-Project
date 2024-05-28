@@ -6,6 +6,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="index_style.css">
     <link rel="stylesheet" href="00_project_theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>     <!--載入 jQuery-->
 </head>
 <body>
@@ -45,8 +49,6 @@
         <img src="src/home/homepage4.jpg" alt="首頁首圖">
         <img id="highlight" src="src/home/highlight.png" alt="首圖標題">
     </div>
-    <script src="trans.js"></script>
-    <!-- 使用幻燈片特效播放 -->
 
     <div>
         <div id="news">
@@ -88,8 +90,22 @@
             <img class="pictogram" id="weightlifting" src="src/pictograms/weightlifting.png" alt="運動項目">
         </div>
     </div>
+
     <div id="taiwan" class="taiwan">
-        <img src="src/home/taiwan.jpg" alt="台灣館">
+        <div id="taiwan_intro" class="taiwan_intro">
+            <div id="tw_title_text">
+                <h2> 巴黎文化奧運：臺灣館 </h2>
+                <p>
+                巴黎文化奧運臺灣館以「自由之聲、島嶼風華、當代新藝、世界共融」為4大主題，邀集22組表演團隊、120多人，將在7月27日到8月10日於園區，安排音樂、戲曲新編、舞蹈、DJ演出等近達60場節目，
+                讓國際看見青壯新銳的充沛活力，與世界分享臺灣對自由、平等、性別、族群、母語、混種等價值認同的轉化及實踐。
+                </p>
+            </div>
+        </div>
+        <img class="taiwanpage" src="src/home/taiwan.jpg" alt="台灣館">
+        <img class="taiwanpage" src="src/home/taiwan2.png" alt="台灣館">
+        <img class="taiwanpage" src="src/home/taiwan3.png" alt="台灣館">
+        <div id="tw_mask" class="tw_mask"></div>
+        <div id="tw_text" class="tw_text" data-stroke="Taiwan">Taiwan</div>
     </div>
     <div id="producer-container">
         <img id="linmarc" src="src/home/linmarc.png" alt="林本然">
@@ -99,6 +115,8 @@
         <img id="text" src="src/home/producer_text.png" alt="作者標題">
     </div>
 </div>
+    <script src="trans.js"></script>
+    <!-- 使用幻燈片特效播放 -->
 
     <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
 
