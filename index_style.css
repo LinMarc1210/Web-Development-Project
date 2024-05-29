@@ -255,7 +255,7 @@
     position: absolute;
     top: 70%;
     left: 25%;
-    font: 24px consolas;
+    font: 24px "Noto Serif TC";
     opacity: 0;
     color: white;
     animation: floattext 1s linear 1.5s forwards;
@@ -264,7 +264,7 @@
     position: absolute;
     top: 70%;
     right: 25%;
-    font: 24px consolas;
+    font: 24px "Noto Serif TC";
     opacity: 0;
     color: white;
     animation: floattext 1s linear 1.5s forwards;

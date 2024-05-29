@@ -42,7 +42,7 @@
     text-align: center;
     background-color: darkslategrey;
     color: wheat;
-    font: 2vw Consolas; /* 頁面寬度 5% */
+    font: 2vw "Noto Serif TC"; /* 頁面寬度 5% */
     border-radius: 50px;
     z-index: 2;
 }
@@ -86,11 +86,11 @@
     width: 70%;           /* 佔右半部70% */
     height: 100%;
     pointer-events: none; /* 确保表格不会影响 .text 的点击事件 */
-    font: 1.5vw arial;
+    font: 1.5vw "Noto Serif TC";
     opacity: 1;
 }
 .text {
-    font: 1.5vw arial;       /* vw 是相對於視窗寬度的大小 */
+    font: 1.5vw "Noto Serif TC";       /* vw 是相對於視窗寬度的大小 */
 }
 .text h2 {
     position: fixed;

@@ -39,7 +39,7 @@ label{
     padding: 10px;
     border-radius: 100%;
     background-color: rgba(255,255,255,0.5);
-    font-family: consolas;
+    font-family: "Noto Serif TC";
     
 }
 .style2{
@@ -48,7 +48,7 @@ label{
     padding: 10px;
     border-radius: 100%;
     background-color: rgba(255,192,203,0.5);
-    font-family: consolas;
+    font-family: "Noto Serif TC";
 }
 .style3{
     border: 3px solid skyblue;
@@ -56,7 +56,7 @@ label{
     padding: 10px;
     border-radius: 100%;
     background-color: rgba(135,206,235,0.5);
-    font-family: consolas;
+    font-family: "Noto Serif TC";
 }
 .style4{
     border: 3px solid lightgoldenrodyellow;
@@ -64,7 +64,7 @@ label{
     padding: 10px;
     border-radius: 100%;
     background-color: rgba(250,250,210,0.5);
-    font-family: consolas;
+    font-family: "Noto Serif TC";
 }
 .style5{
     border: 3px solid plum;
@@ -72,7 +72,7 @@ label{
     padding: 10px;
     border-radius: 100%;
     background-color: rgba(221,160,221,0.5);
-    font-family: consolas;
+    font-family: "Noto Serif TC";
 }
 
 /* 排行榜 */
@@ -92,10 +92,9 @@ label{
 }
 .bar{
     margin: 10px;
-    width: 8em;
+    width: 10em;
     border-right-style: solid;
     border-right-color: rgba(62, 104, 104,1);
-
 }
 @keyframes bar1{
     from{border-right-width: 0px;}

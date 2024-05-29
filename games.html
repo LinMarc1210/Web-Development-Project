@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment</title>
-    <link rel="stylesheet" href="comment.css">
+    <title>Games</title>
+    <link rel="stylesheet" href="games.css">
     <link rel="stylesheet" href="00_project_theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
-    <script src="comment.js"></script>
+    <script src="games.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>     <!--載入 jQuery-->
 </head>
 <body>
@@ -38,33 +38,29 @@
         </nav>
     </div>
 
-    <div id="all_content">
-    <img src="src/comment/banner.png" width="99%">
-    <!-- 排行榜 -->
-    <div id="hot">
-        <h2>網路聲量熱門選手</h2>
-        <ol class="bar_ol">
-            <li id="dai" class="bar"><b>戴資穎:228,010則</b></li>
-            <li id="guo" class="bar"><b>郭婞淳:204,941則</b></li>
-            <li id="yung" class="bar"><b>楊勇緯:171,172則</b></li>
-            <li id="zheng" class="bar"><b>鄭怡靜:112,722則</b></li>
-            <li id="zhunag" class="bar"><b>莊智淵:107,875則</b></li>
-        </ol>
+<div id="all_content">
+    <div class="games-container">
+        <div class="games-board">
+            <img class="games-bg" src="src/games/archery_bg.jpg">
+            <img id="dart" src="src/games/dart.png">
+            <img id="target" src="src/games/target.png">
+            <img id="arrow" src="src/games/arrow.webp">
+            <div id="shooting" onclick="shoot()">Shoot !</div>
+            <div id="score1">Score: <span>0</span></div>
+            <div id="end"></div>
+            <!-- <div class="games-mask"></div> -->
+        </div>
+        <div class="games-rule">
+            <img id="character1" class="character" src="src/games/character1.png">
+            <div id="rule1" class="rule" onclick="ruleText()">
+                <h2>2020 東京奧運｜團體射箭男子組銀牌得主：湯智鈞</h2>
+                <p>繼 2020 東奧成功在團體射箭奪得銀牌，這次我要挑戰在 2024 巴黎奧運上拿到金牌！<br>
+                    離比賽還有一段時間，我必須要把握時間練習，就選在這次的場地練習吧！
+                </p>
+            </div>
+        </div>
     </div>
-
-    <!-- 留言板 -->
-    <div id="box">
-        <p>一起為中華隊加油!</p>
-    </div>
-
-    <!-- 輸入框 -->
-    <br><br>
-    <span id="input_content">
-        <label>想說的話: <input type="text" id="message" autocomplete="off"></label>
-        <button onclick="upload()">submit</button>
-    </span>
-    <br><br>
-    </div>
+</div>
     
     <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
 </body>

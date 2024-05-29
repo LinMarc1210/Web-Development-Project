@@ -51,7 +51,7 @@ h1{
     overflow-y: hidden;
     height: 0;
     transition: height 0.3s ease;
-    font-family: Courier;
+    font-family: "Noto Serif TC";
     border: white 2px solid;
     border-radius: 10px;
     margin-bottom: 10px;
