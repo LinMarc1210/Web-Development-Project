@@ -72,6 +72,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
 }
 #shooting:hover {
     transition: 0.5s;
@@ -109,6 +111,8 @@
     text-align: center;
     align-content: center;
     font-size: 8vw;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
 }
 #character1 {
     position: absolute;
@@ -145,4 +149,126 @@
 }
 /**/
 
+/* 遊戲2：羽球 */
+#court {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+#hitting {
+    position: absolute;
+    align-content: center;
+    text-align: center;
+    width: 10%;
+    height: 5%;
+    border-radius: 10px;
+    background-color: darkslategray;
+    color: wheat;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+}
+#hitting:hover {
+    transition: 0.5s;
+    background-color: #232941;
+    color:white;
+}
+#ready {
+    position: absolute;
+    height: 40%;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+#ball {
+    position: absolute;
+    height: 6%;
+    top: 0%;
+    left: 37%;
+    transform-origin: 0% 0%;
+    /* transform: translate(-50%, -100%);   60 + 45 */
+    animation: ballFalling 1s ease-in forwards;
+}
+#target2 {
+    position: absolute;
+    height: 6%;
+    top: 36%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+#direction {
+    position: absolute;
+    height: 4%;
+    top: 36%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 400;
+    /* animation: ballDirection 1.5s ease infinite; */
+}
+#score2 {
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    right: 0%;
+    background-color: darkslategray;
+    color: wheat;
+    text-align: center;
+}
+#end2 {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-size: 8vw;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+}
+#character2 {
+    position: absolute;
+    width: 22%;
+    object-fit: contain; /* 這裡可以嘗試 'cover' 或 'contain' */
+    right: 5%;
+}
+#character2:hover {
+    transform: scale(1.1);
+}
+#rule2 {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 27%;
+    border-radius: 10px;
+
+    align-self: center;
+    text-align: center;
+    background-color: wheat;
+    color: black;
+}
+@keyframes ballFalling {
+    0% {top: 0%;}
+    100% {top: 80%;}
+}
+@keyframes ballDirection {
+    0% {transform: rotate(10deg);}
+    50% {transform: rotate(80deg);}
+    100% {transform: rotate(10deg);}
+}
+/* @keyframes ballAttack {
+    0% {left: }
+} */
 

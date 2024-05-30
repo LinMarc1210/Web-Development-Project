@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
     <script src="games.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>     <!--載入 jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 </head>
 <body>
     <!--等index的nav加入，這邊先大致用個div代替-->
@@ -56,6 +57,29 @@
                 <h2>2020 東京奧運｜團體射箭男子組銀牌得主：湯智鈞</h2>
                 <p>繼 2020 東奧成功在團體射箭奪得銀牌，這次我要挑戰在 2024 巴黎奧運上拿到金牌！<br>
                     離比賽還有一段時間，我必須要把握時間練習，就選在這次的場地練習吧！
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="games-container">
+        <div class="games-board">
+            <img class="games-bg" src="src/games/badminton_bg.jpg">
+            <img id="court" src="src/games/court.png">
+            <img id="ready" src="src/games/ready.png">
+            <img id="ball" src="src/games/ball.png">
+            <img id="target2" src="src/games/target.png">
+            <!-- <img id="direction" src="src/games/direction.png"> -->
+            <div id="hitting" onclick="hit()">Hit !</div>
+            <div id="score2">Score: <span>0</span></div>
+            <div id="end2"></div>
+            <!-- <div class="games-mask"></div> -->
+        </div>
+        <div class="games-rule">
+            <img id="character2" class="character" src="src/games/character2.png">
+            <div id="rule2" class="rule" onclick="ruleText2()">
+                <h2>世界羽后｜戴資穎</h2>
+                <p>2024 巴黎奧運可能是我最後一次挑戰奧運，面對強大的各國好手，希望這次可以順利奪回金牌！<br>
+                    在剩下的備戰期間，妳也來幫我練習穩定性吧！
                 </p>
             </div>
         </div>
