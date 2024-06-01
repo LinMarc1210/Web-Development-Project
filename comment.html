@@ -34,7 +34,9 @@
     <div class="sideMenu">
         <nav>
             <a href="#hot" class="fas">Ranking</a>
+            <a href="#push" class="fas">vote</a>
             <a href="#box" class="fas">message board</a>
+
         </nav>
     </div>
 
@@ -44,12 +46,40 @@
     <div id="hot">
         <h2>網路聲量熱門選手</h2>
         <ol class="bar_ol">
-            <li id="dai" class="bar"><b>戴資穎:228,010則</b></li>
-            <li id="guo" class="bar"><b>郭婞淳:204,941則</b></li>
-            <li id="yung" class="bar"><b>楊勇緯:171,172則</b></li>
-            <li id="zheng" class="bar"><b>鄭怡靜:112,722則</b></li>
-            <li id="zhunag" class="bar"><b>莊智淵:107,875則</b></li>
+            <li id="dai" class="bar"><b>戴資穎:<span id="1">228010</span>則</b></li>
+            <li id="guo" class="bar"><b>郭婞淳:<span id="2">204941</span>則</b></li>
+            <li id="yung" class="bar"><b>楊勇緯:<span id="3">171172</span>則</b></li>
+            <li id="zheng" class="bar"><b>鄭怡靜:<span id="4">112722</span>則</b></li>
+            <li id="zhunag" class="bar"><b>莊智淵:<span id="5">107875</span>則</b></li>
         </ol>
+    </div>
+    <br>
+    <!-- 助力版 -->
+    <div id="push">
+        <table>
+            <caption><h2>為喜歡的選手加油</h2></caption>
+            <tr>
+                <th>戴資穎</th>
+                <th>郭婞淳</th>
+                <th>楊勇緯</th>
+                <th>鄭怡靜</th>
+                <th>莊智淵</th>
+            </tr>
+            <tr>
+                <td class="photo"><img src="src/sport/badminton-戴資穎.jpg" ></td>
+                <td class="photo"><img src="src/sport/Weightlifting-郭婞淳.jpg"></td>
+                <td class="photo"><img src="src/sport/judo-楊永偉.jpg"></td>
+                <td class="photo"><img src="src/sport/table-鄭怡靜.jpg"></td>
+                <td class="photo"><img src="src/sport/table-莊智淵.jpg"></td>
+            </tr>
+            <tr>
+                <td><button onclick="vote(1)">為羽后點讚</button></td>
+                <td><button onclick="vote(2)">為舉重女神點讚</button></td>
+                <td><button onclick="vote(3)">為柔道男神點讚</button></td>
+                <td><button onclick="vote(4)">為桌球一姐點讚</button></td>
+                <td><button onclick="vote(5)">為桌球教父點讚</button></td>
+            </tr>
+        </table>
     </div>
 
     <!-- 留言板 -->

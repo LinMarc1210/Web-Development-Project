@@ -137,4 +137,35 @@ label{
     border-right-width: 284px;
 }
 
+th{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+table,td,th{
+    border: rgba(255,255,255,0.5) solid 2px;
+    border-collapse: collapse;
+}
+.photo img{
+    border-radius: 60%;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    opacity: 0.8;
+  }
+  td{
+    padding: 10px;
+    text-align: center;
+  }
+  #push button {
+    width: 70%;
+    text-align: center;
+    background-color: darkslategrey;
+    color: wheat;
+    border-radius: 50px;
+}
+#push{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url(src/comment/bg4.jpeg);
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
 

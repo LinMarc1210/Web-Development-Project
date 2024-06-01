@@ -12,40 +12,9 @@ function upload(){
         visibility: 'hidden'
     });
     $('#box').append(ele);
-
-    // // 確定位置
-    // var isOverlap;
-    // var randomHeight, randomWidth;
-
-    // do {
-    //     isOverlap = false;
-    //     var randomHeight = (Math.floor(Math.random() * ( 55- 15 + 1)) + 15)*10;  //max:55 min:15
-    //     var randomWidth = (Math.floor(Math.random() * (boxWidth - 1 + 1)));
-
-    //     // 檢查新位置是否與現有元素重疊
-    //     $('#box > span').each(function() {
-    //         var existingSpan = $(this);
-    //         if (existingSpan[0] === ele[0]) return; // Skip the new element itself
-
-    //         var existingTop = existingSpan.position().top;
-    //         var existingLeft = existingSpan.position().left;
-    //         var existingHeight = existingSpan.outerHeight(true);
-    //         var existingWidth = existingSpan.outerWidth(true);
-
-    //         if (
-    //             randomHeight < existingTop + existingHeight &&
-    //             randomHeight + ele.outerHeight(true) > existingTop &&
-    //             randomWidth < existingLeft + existingWidth &&
-    //             randomWidth + ele.outerWidth(true) > existingLeft
-    //         ) {
-    //             isOverlap = true;
-    //             return false;
-    //         }
-    //     });
-    // } while (isOverlap);
     
-    var min=66;
-    var max=103;
+    var min=118;
+    var max=158;
     var randomHeight = (Math.floor(Math.random() * ( max- min + 1)) + min)*10; 
     var randomWidth = (Math.floor(Math.random() * (boxWidth - 1 + 1)));
     
@@ -61,20 +30,23 @@ function upload(){
         top: (randomHeight - 50) + 'px', // 動畫結束位置，比初始位置高50px
         opacity: 1
     }, 1000); // 1秒內完成動畫
+}
 
-    // // 准备要追加的数据
-    // var newData = {
-    //     content: v,
-    //     class: randomClass,
-    //     top: randomHeight,
-    //     left: randomWidth
-    // };
-
-    //  // 读取现有的 data.json 文件
-    //  $.getJSON("data.json", function(data) {
-    //     // 将新数据追加到 JSON 对象中
-    //     data.push(newData);
-        
-    // });
-
+function vote(num){
+    document.getElementById(num).innerHTML=parseInt(document.getElementById(num).innerHTML)+1000;
+    var element;
+    if(num==1){
+        element=document.getElementById('dai');
+    }if(num==2){
+        element=document.getElementById('guo');
+    }if(num==3){
+        element=document.getElementById('yung');
+    }if(num==4){
+        element=document.getElementById('zheng');
+    }if(num==5){
+        element=document.getElementById('zhunag');
+    }
+    var computedStyle = window.getComputedStyle(element);
+    var a = parseInt(computedStyle.borderRightWidth);
+    element.style.borderRightWidth = (a + 2.6) + "px";
 }

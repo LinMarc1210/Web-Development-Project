@@ -26,7 +26,8 @@
   justify-content: space-around;
 }
 #Badminton{
-  background-image: url(src/sport/bg2.jpg);
+  background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(src/sport/bg2.jpg); 
+
 }
 .handle{
   color: white;
@@ -75,7 +76,7 @@ h1{
 
   /**/
   #Table_Tennis{
-    background-image: url(src/sport/bg3.jpg);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(src/sport/bg3.jpg); 
     padding-bottom: 10px;
   }
   .table_intro ,.Taekwondo_intro,.Swimming_intro,.Judo_intro{
@@ -93,11 +94,11 @@ h1{
 
   /**/
   #Judo{
-    background-image: url(src/sport/bg1.jpg);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(src/sport/bg1.jpg); 
     padding-bottom: 10px;
   }
   #Taekwondo{
-    background-image: url(src/sport/bg5.jpg);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(src/sport/bg5.jpg); 
     padding-bottom: 10px;
   }
   #Taekwondo_name{
@@ -128,11 +129,11 @@ h1{
     transition: transform 3s ease, opacity 3s ease;
   }
   #Swimming{
-    background-image: url(src/sport/bg4.jpg);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(src/sport/bg4.jpg); 
     padding-bottom: 10px;
   }
   #Weightlifting{
-    background-image: url(src/sport/bg6.jpg);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(src/sport/bg6.jpg); 
     padding-bottom: 10px;
   }
 
