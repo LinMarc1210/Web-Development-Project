@@ -13,7 +13,7 @@
     width: 100%;
     height: 800px;
     overflow: hidden;       /* 溢出的圖片裁切掉 */
-    transform: translateY(400px);
+    transform: translateY(250px);
     margin-bottom: 10px;
     transition: transform 0.5s ease; /* 添加淡入效果 */
 }
@@ -68,8 +68,7 @@
 }
 .title {
     position: absolute;
-    background-color: black;    /* 黑色遮罩 */
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.6);
     width: 25%;
     height: 100%;
     z-index: 2;

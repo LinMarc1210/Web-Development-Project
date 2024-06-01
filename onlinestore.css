@@ -1,29 +1,308 @@
-/* 紀念T表格 */
 #all_content{
     position: absolute;
     top: 100px;
     width: 99%;
 }
+
+/* 紀念T表格 */
+.store {
+    width: 100%;
+}
 .store table {
     margin: 0 auto;     /* 在父容器（div）裡面水平置中 */
     z-index: 1;
-    border: 1px solid black;
+    border: 6px solid linen;
     width: 90%;
 }
-.store table td {
+.store table caption {
+    font-size: 4vw;
+    color: linen;
+}
+.store table tr td {
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
+    border: 1px dashed lightcyan;
+    font-size: 1.5vw;
+}
+.store table tr .product_name {
+    color: linen;
+}
+.store table .category {
+    background-color: linen;
+    font-size: 2vw;
+    color: darkslategray;
+    padding: 5px;
 }
 .store .product {
     padding: 5%;        /* 為了置中 (5 + 90 + 5) */
-    width: 90%;
+    width: 80%;
     height: auto;
     border-radius: 50%;
-    z-index: 1;
-    object-fit: cover;
+    object-fit: contain;
+}
+.store td img {
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+    z-index: 2;
 }
 
 
+/* 商品窗 */
+#window {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: rgb(255, 250, 240);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    color: black;
+    z-index: 500;
+    filter: drop-shadow(8px 8px 10px grey);
+    -webkit-filter: drop-shadow(8px 8px 10px grey);
 
+    display: none;  /* 點擊前先隱藏 */
+}
+#bg-logo {
+    position: absolute;
+    height: 80%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+}
+#item {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    height: 52%;
+    overflow: hidden;
+    /* border: 1px dashed #1c175c; */
+}
+#item img {
+    position:absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#sideText {
+    position: absolute;
+    left: 45%;
+    width: 55%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding-left: 20px;
+    overflow: hidden;
+}
+#itemname {
+    position: absolute;
+    text-align: left;
+    align-items: center;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 10%;
+    overflow: hidden;
+    font-size: 2vw;
+    color: #1c175c;
+    /* background-color: aqua; */
+}
+hr {
+    position: absolute;
+    width: 80%;
+    top: 32%;
+    color:#1c175c;
+}
+.intro-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 25%; /* 設定容器高度 */
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: space-between; /* 垂直均分 */
+    padding-right: 15%;
+}
+.intro {
+    list-style-type: none; /* 移除點 */
+    padding: 0; /* 移除內間距 */
+    margin: 0; /* 移除外間距 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 垂直均分 */
+    height: 100%; /* 讓 <ul> 填滿父容器高度 */
+}
+.intro li {
+    /* 可根據需求調整每個 <li> 的樣式 */
+    text-align: left; /* 置中對齊文本 */
+    padding-right: 20px;
+    font-size: 1.5vw;
+    margin:5px;
+}
+#amount {
+    background-color: transparent;
+    width: 30%;
+    border: 1px solid #1c175c;
+    font-size: 1.2vw;
+}
+#price {
+    position: absolute;
+    display: flex;
+    top: 70%;
+    font-size: 3vw;
+    font-weight: bold;
+    color:#1c175c;
+}
+#button1 {
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    width: 40%;
+    border: 1px solid #1c175c;
+    background-color: transparent;
+    color: #1c175c;
+    text-align: center;
+    transition: color 0.5s, background-color 0.5s;
+    font-size: 25px;
+}
+#button1:hover {
+    background-color: darkred;
+    color: white;
+}
+#button2 {
+    position: absolute;
+    top: 80%;
+    right: 14%;
+    width: 40%;
+    border: 1px solid #1c175c;
+    background-color: #1c175c;
+    color: white;
+    text-align: center;
+    transition: color 0.5s, background-color 0.5s;
+    font-size: 25px;
+}
+#button2:hover {
+    background-color: darkred;
+    color: white;
+}
+#close {
+    position: absolute;
+    width: 5%;
+    right: 1%;
+    top: 1%;
+}
 
+/* 購物車 */
+#shopcart {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    margin-top: 10px;
+    background-color: linen;
+}
+#cart-title {
+    position: absolute;
+    width: 96%;
+    margin: 2%;
+    font-size: 4vw;
+    color:#1c175c;
+    border-bottom: 2px solid #1c175c;
+}
+#cart-table {
+    position: absolute;
+    top: 12%;
+    width: 96%;
+    margin: 2%;
+    font-size: 1.5vw;
+    color:#1c175c;
+}
+#header {
+    color: linen;
+    background-color: #1c175c;
+}
+.cart-img {
+    width: 5%;
+    object-fit: contain;
+    overflow: hidden;
+}
+.cart-name {
+    width: 50%;
+    object-fit: contain;
+    overflow: hidden;
+}
+.cart-price {
+    width: 15%;
+    object-fit: contain;
+    overflow: hidden;
+}
+.cart-amount {
+    width: 15%;
+    object-fit: contain;
+    overflow: hidden;
+}
+.cart-total {
+    width: 15%;
+    object-fit: contain;
+    overflow: hidden;
+}
+.cart-img img {
+    width: 100%;
+}
+
+/* 購物車（表單） */
+#buycart {
+    position: absolute;
+    top: 70%;
+    width: 96%;
+    margin: 2%;
+    /* background-color: white; */
+    height: 22%;
+}
+#buycart label {
+    width: 80%;
+    font-size: 2vw;
+    color: #1c175c;
+    margin: 10px;
+}
+#buycart label input {
+    position: absolute;
+    width: 60%;
+    font-size: 1.5vw;
+    color: #1c175c;
+    background-color: whitesmoke;
+}
+#submit {
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+    width: 20%;
+    border: 1px solid #1c175c;
+    background-color: #1c175c;
+    color: linen;
+    text-align: center;
+    transition: color 0.5s, background-color 0.5s;
+    font-size: 25px;
+}
+#submit:hover {
+    background-color: darkred;
+    color: white;
+}
+#end {
+    position: absolute;
+    width: 15%;
+    right: 0%;
+    top: 75%;
+    opacity: 0;
+}
+@keyframes cartend {
+    0%{right:0%; opacity: 0;}
+    50%{right:10%; opacity: 1;}
+    100%{top:60%; opacity: 0;}
+}

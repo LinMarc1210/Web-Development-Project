@@ -142,10 +142,10 @@ function hit(){
         button.text('Restart');
 
         var end = $('#end2');
-        if (totalScore >= 46){
+        if (totalScore2 >= 46){
             end.text('要拿金牌了');
         }
-        else if (totalScore >= 30){
+        else if (totalScore2 >= 30){
             end.text('美賣喔');
         } 
         else{
@@ -169,7 +169,7 @@ function hit(){
             button.removeAttr('onclick');   // 暫時停止按鈕功能
             var direction = $('<img id="direction" onclick="hitDirection()" src="src/games/direction.png"></img>');  // 決定方向
             direction.css({
-                'animation': 'ballDirection 1.5s ease infinite',
+                'animation': 'ballDirection 3s ease infinite',
             })
             target.after(direction);
         }

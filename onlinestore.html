@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>     <!--載入 jQuery-->
+    
 </head>
 <body>
     <div id="top">
@@ -29,73 +31,161 @@
     <!-- 使用 checkbox 來做開關 -->
     <div class="sideMenu">
         <nav>
-            <a href="#Badminton" class="fas">Badminton</a>
-            <a href="#Table_Tennis" class="fas">Table Tennis</a>
-            <a href="#Taekwondo" class="fas">Taekwondo</a>
-            <a href="#Swimming" class="fas">Swimming</a>
-            <a href="#Judo" class="fas"></i>Judo</a>
-            <a href="#Weightlifting" class="fas"></i>Weightlifting</a>
+            <a href="#1" class="fas">2024奧運紀念T</a>
+            <a href="#2" class="fas">吉祥物 Phryges 紀念幣</a>
+            <a href="#3" class="fas">2024奧運款筆袋</a>
+            <a href="#4" class="fas">造型公仔</a>
+            <a href="#5" class="fas"></i>紀念茶杯與水瓶</a>
+            <a href="#shopcart" class="fas"></i>購物車</a>
         </nav>
     </div>
 
 <div id="all_content">
     <div class="store">
         <table>
-            <caption><b>YONEX 國際限量款 2024 巴黎奧運紀念T</b></caption>
+            <caption><b>2024 巴黎奧運系列商品</b></caption>
+            <tr id="1"><td class="category" colspan="4"><b>2024奧運紀念T</b>
             <tr>
                 <td><img class="product" src="src/onlinestore/shirt_white.png">
                 <td><img class="product" src="src/onlinestore/shirt_beige.png">
                 <td><img class="product" src="src/onlinestore/shirt_green.png">
                 <td><img class="product" src="src/onlinestore/shirt_blue.png">
             <tr>
-                <td><b>紀念T（白）</b>
-                <td><b>紀念T（燕麥黃）</b>
-                <td><b>紀念T（粉綠）</b>
-                <td><b>紀念T（藍莓紫）</b>
+                <td class="product_name"><b>紀念T（白）</b>
+                <td class="product_name"><b>紀念T（燕麥黃）</b>
+                <td class="product_name"><b>紀念T（粉綠）</b>
+                <td class="product_name"><b>紀念T（藍莓紫）</b>
+            <tr id="2"><td class="category" colspan="4"><b>吉祥物 Phryges 紀念幣</b>
             <tr>
                 <td><img class="product" src="src/onlinestore/coin1.png">
                 <td><img class="product" src="src/onlinestore/coin2.png">
                 <td><img class="product" src="src/onlinestore/coin3.png">
                 <td><img class="product" src="src/onlinestore/coin4.png">
             <tr>
-                <td><b>Phryges 紀念幣（經典款）</b>
-                <td><b>Phryges 紀念幣（渡假款）</b>
-                <td><b>Phryges 紀念幣（山嵐款）</b>
-                <td><b>Phryges 紀念幣（港灣款）</b>
+                <td class="product_name"><b>Phryges 紀念幣（經典款）</b>
+                <td class="product_name"><b>Phryges 紀念幣（渡假款）</b>
+                <td class="product_name"><b>Phryges 紀念幣（山嵐款）</b>
+                <td class="product_name"><b>Phryges 紀念幣（港灣款）</b>
+            <tr id="3"><td class="category" colspan="4"><b>2024奧運款筆袋</b>
             <tr>
                 <td><img class="product" src="src/onlinestore/pencilcase1.png">
                 <td><img class="product" src="src/onlinestore/pencilcase2.png">
                 <td><img class="product" src="src/onlinestore/pencilcase3.png">
                 <td><img class="product" src="src/onlinestore/pencilcase4.png">
             <tr>
-                <td><b>Phryges 筆袋（活潑款）</b>
-                <td><b>Paris Olympic 筆袋</b>
-                <td><b>Phryges 筆袋（特寫橘）</b>
-                <td><b>Phryges 筆袋（特寫紅）</b>
+                <td class="product_name"><b>Phryges 筆袋（活潑款）</b>
+                <td class="product_name"><b>Paris Olympic 筆袋</b>
+                <td class="product_name"><b>Phryges 筆袋（特寫橘）</b>
+                <td class="product_name"><b>Phryges 筆袋（特寫紅）</b>
+            <tr id="4"><td class="category" colspan="4"><b>造型公仔</b>
             <tr>
                 <td><img class="product" src="src/onlinestore/figure1.png">
                 <td><img class="product" src="src/onlinestore/figure2.png">
                 <td><img class="product" src="src/onlinestore/figure3.png">
                 <td><img class="product" src="src/onlinestore/figure4.png">
             <tr>
-                <td><b>Phryges 15cm公仔</b>
-                <td><b>Phryges 衝浪公仔</b>
-                <td><b>Phryges 柔道公仔</b>
-                <td><b>艾菲爾鐵塔（漸層款）</b>
+                <td class="product_name"><b>Phryges 15cm公仔</b>
+                <td class="product_name"><b>Phryges 衝浪公仔</b>
+                <td class="product_name"><b>Phryges 柔道公仔</b>
+                <td class="product_name"><b>艾菲爾鐵塔（漸層款）</b>
+            <tr id="5"><td class="category" colspan="4"><b>紀念茶杯與水瓶</b>
             <tr>
                 <td><img class="product" src="src/onlinestore/bottle1.png">
                 <td><img class="product" src="src/onlinestore/bottle2.png">
                 <td><img class="product" src="src/onlinestore/bottle3.png">
                 <td><img class="product" src="src/onlinestore/bottle4.png">
             <tr>
-                <td><b>2024 巴黎奧運加蓋保溫杯</b>
-                <td><b>2024 巴黎奧運陶瓷馬克杯</b>
-                <td><b>2024 巴黎奧運大水瓶</b>
-                <td><b>2024 巴黎殘奧紀念瓶</b>
+                <td class="product_name"><b>2024 巴黎奧運加蓋保溫杯</b>
+                <td class="product_name"><b>2024 巴黎奧運陶瓷馬克杯</b>
+                <td class="product_name"><b>2024 巴黎奧運大水瓶</b>
+                <td class="product_name"><b>2024 巴黎殘奧紀念瓶</b>
         </table>
+    </div>
+    <div id="window" class="window">
+        <img id="bg-logo" src="src/onlinestore/onlinelogo.png">
+        <div id="item"></div>
+        <div id="sideText">
+            <div id="itemname"></div>
+            <hr>
+            <div class="intro-container">
+                <ul class="intro">
+                    <li><b>顏色｜</b><span id="color"></span></li>
+                    <li><b>材質｜</b><span id="material"></span></li>
+                    <li><b>特色｜</b><span id="text"></span></li>
+                    <li><b>數量｜</b><input id="amount" min="0" max="10" type="number" value="1" autocomplete="off" placeholder="購買數量">
+                </ul>
+            </div>
+            <div id="price">NTD&nbsp;&nbsp;<span></span></div>
+            <button id="button1" onclick="addToCart()">加入購物車</button>
+            <form id="buynow">
+                <button id="button2" onclick="">立即購買</button>
+            </form>
+        </div>
+        <img id="close" onclick="hideWindow()" src="src/onlinestore/closeCross.png">
+    </div>
+    <div id="shopcart">
+        <div id="cart-title">購物車</div>
+        <table id="cart-table" border="1">
+            <tr id="header">
+                <td class="cart-img">商品
+                <td class="cart-name">名稱
+                <td class="cart-price">單價
+                <td class="cart-amount">數量
+                <td class="cart-total">總價
+            <tr class="cart-row" hidden>
+                <td class="cart-img">
+                <td class="cart-name">
+                <td class="cart-price">
+                <td class="cart-amount">
+                <td class="cart-total">
+            <tr class="cart-row" hidden>
+                <td class="cart-img">
+                <td class="cart-name">
+                <td class="cart-price">
+                <td class="cart-amount">
+                <td class="cart-total">
+            <tr class="cart-row" hidden>
+                <td class="cart-img">
+                <td class="cart-name">
+                <td class="cart-price">
+                <td class="cart-amount">
+                <td class="cart-total">
+            <tr class="cart-row" hidden>
+                <td class="cart-img">
+                <td class="cart-name">
+                <td class="cart-price">
+                <td class="cart-amount">
+                <td class="cart-total">
+            <tr class="cart-row" hidden>
+                <td class="cart-img">
+                <td class="cart-name">
+                <td class="cart-price">
+                <td class="cart-amount">
+                <td class="cart-total">
+            <tr class="cart-row" hidden>
+                <td class="cart-img">
+                <td class="cart-name">
+                <td class="cart-price">
+                <td class="cart-amount">
+                <td class="cart-total">
+            <tr class="cart-row" hidden>
+                <td class="cart-img">
+                <td class="cart-name">
+                <td class="cart-price">
+                <td class="cart-amount">
+                <td class="cart-total">
+        </table>
+        <form id="buycart">                         <!-- 這邊是表單 -->
+            <p><label>姓名：<input id="customer" type="text" required></label><br></p>
+            <p><label>電話：<input id="phone" type="tel" pattern="[0-9]" required></label><br></p>
+            <p><label>地址：<input id="address" type="text" required></label><br></p>
+            <p><button type="button" id="submit">清空購物車！</button></p>
+        </form>
+        <!-- <img id="end" src="src/onlinestore/succeed.png"> -->
     </div>
 </div>
     
     <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
+    <script src="onlinestore.js"></script>
 </body>
 </html>
