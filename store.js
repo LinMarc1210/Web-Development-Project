@@ -1,13 +1,12 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', scrollFloat);
+function scrollFloat(){
     let stores = document.querySelectorAll('.store');
-    
     // 將 NodeList 轉成 array，然後移除第一個元素，更新
     let storeArray = Array.from(stores);
     let removed = storeArray.shift();       // removed 的元素用不到，storeArray 現在移除第一個元素了
 
     storeArray.forEach(function(store) {
         let rect = store.getBoundingClientRect();
-        
         // 若滾動到這個 div 了
         if (rect.top < window.innerHeight && rect.bottom >= 0) {
             store.classList.add('float-in');
@@ -16,7 +15,7 @@ window.addEventListener('scroll', function() {
             store.classList.remove('float-in');
         }
     });
-});
+};
 
 var intro = [
     $('<table class="title_intro"></table>'),
@@ -118,6 +117,8 @@ function toggleTitle(index) {
         $(title).siblings('img').css({'filter': 'blur(10px)', '-webkit-filter:': 'blur(10px)'});    // 原底圖模糊
     }
 }
+
+
 
 
 

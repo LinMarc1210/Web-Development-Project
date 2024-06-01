@@ -143,12 +143,13 @@ $(".store img").each(function(){
     $(this).on('click', spanWindow);
 });
 
-document.getElementById('submit').addEventListener('click', function() {
+document.getElementById('submit').addEventListener('click', clearTheCart);
+function clearTheCart() {
     if (cart.length == 0){
-        alert('購物車是空的！')
+        alert('購物車是空的！');
         return;
     }
-    var form = $('#buycart');
+    var form = document.getElementById('buycart');
     var username = document.getElementById('customer');
     var phone = document.getElementById('phone');
     var address = document.getElementById('address');
@@ -157,35 +158,39 @@ document.getElementById('submit').addEventListener('click', function() {
         alert('請填寫購買人資訊！');
         return;
     }
+
     // 處理資料
-    var end = $('<img id="end" src="src/onlinestore/succeed.png">');
-    end.css({
-        'animation': 'cartend 3s ease',
-        'animation-play-state': 'paused',
-    });
+    var end = document.createElement('img');
+    end.id = 'end';
+    end.src = 'src/onlinestore/succeed.png';
+    end.style.animation = 'cartend 3s ease';
+    end.style.animationPlayState = 'paused';
+
     setTimeout(function(){
-        end.css({'animation-play-state': 'running'});
+        end.style.animationPlayState = 'running';
         // end.remove();
     }, 1);
-    form.after(end);
+    form.parentNode.insertBefore(end, form.nextSibling);
 
     // 清空購物車
     for (var i = 0 ; i < cart.length ; i++){
         allPrice += cart[i].Ptotalprice;
         console.log(allPrice);
+
         // 移除
-        var current = $('.cart-row').eq(i);
-        current.find('.cart-img').html('');
-        current.find('.cart-name').html('');
-        current.find('.cart-price').html('');
-        current.find('.cart-amount').html('');
-        current.find('.cart-total').html('');
-        current.hide();
+        var current = document.getElementsByClassName('cart-row')[i];
+        current.getElementsByClassName('cart-img')[0].innerHTML = '';
+        current.getElementsByClassName('cart-name')[0].innerHTML = '';
+        current.getElementsByClassName('cart-price')[0].innerHTML = '';
+        current.getElementsByClassName('cart-amount')[0].innerHTML = '';
+        current.getElementsByClassName('cart-total')[0].innerHTML = '';
+        current.style.display = 'none';
     }
     var l = cart.length;
     for (var i = 0 ; i < l ; i++){
         cart.shift();
     }
+
     // 購買成功訊息
     var message = '購買成功！\n\n' +
               '姓名: ' + username.value + '\n' +
@@ -202,4 +207,4 @@ document.getElementById('submit').addEventListener('click', function() {
     console.log('Phone:', phone.value);
     console.log('Address:', address.value);
     allPrice = 0;
-});
+}

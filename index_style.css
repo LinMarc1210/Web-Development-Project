@@ -243,6 +243,7 @@
     width: 100%;
     height: 700px;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 #text {
     position: absolute;
@@ -250,6 +251,7 @@
     top: 3%;
     left: 3%;
     animation: popleft 1.5s linear forwards;
+    animation-play-state: paused;
 }
 #l_text {
     position: absolute;
@@ -259,6 +261,7 @@
     opacity: 0;
     color: white;
     animation: floattext 1s linear 1.5s forwards;
+    animation-play-state: paused;
 }
 #y_text {
     position: absolute;
@@ -268,6 +271,7 @@
     opacity: 0;
     color: white;
     animation: floattext 1s linear 1.5s forwards;
+    animation-play-state: paused;
 }
 #linmarc {
     position: absolute;
@@ -277,6 +281,7 @@
     top: 20%;
     left: 15%;
     animation: floatup 1.5s linear forwards;
+    animation-play-state: paused;
 }
 #y1tzuu {
     position: absolute;
@@ -286,6 +291,7 @@
     top: 20%;
     right: 15%;
     animation: floatup 1.5s linear forwards;
+    animation-play-state: paused;
 }
 @keyframes floatup{
     0%   {top:100%; opacity: 0.1;}

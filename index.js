@@ -93,3 +93,18 @@ $('#taiwan').each(function(){
         twTopic.css({'background-color': topicColor[index]})
     }
 });
+
+window.addEventListener('scroll', producerAnimation);
+function producerAnimation() {
+    var div = document.getElementById('producer-container');
+    var rect = div.getBoundingClientRect();
+    // 檢查 div 的底部是否在窗口中
+    if (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        var children = div.children;
+        for (var i = 0; i < children.length; i++) {
+            children[i].style.animationPlayState = 'running';
+        }
+        // 一旦動畫觸發，可以選擇移除滾動事件監聽器
+        window.removeEventListener('scroll', producerAnimation);
+    }
+}
