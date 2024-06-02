@@ -73,7 +73,7 @@ function spanWindow(){
     amount.val(1);
     win.hide();
 
-    winImg.append(clickedImg); // 将点击的图片添加到窗口中
+    winImg.append(clickedImg);
     var nameIndex = parseInt((trIndex / 3)) * 9 + tdIndex + 4 + 1; // 由于索引是从0开始的，所以需要加1
 
     itemName.append( $("table td").eq(nameIndex).text() );  // 5-8, 14-17, 23-26, 32-35, 41-44
@@ -102,7 +102,6 @@ function spanWindow(){
 function hideWindow(){
     var win = $('#window');
     var overlay = $('#overlay');
-    // 移除遮罩层
     overlay.remove();
     win.fadeOut();
 }
@@ -143,29 +142,36 @@ $(".store img").each(function(){
     $(this).on('click', spanWindow);
 });
 
+
+var saveduser;
+var savedphone;
+var savedaddr;
 document.getElementById('submit').addEventListener('click', clearTheCart);
 function clearTheCart() {
-    if (cart.length == 0){
-        alert('購物車是空的！');
-        return;
-    }
     var form = document.getElementById('buycart');
     var username = document.getElementById('customer');
     var phone = document.getElementById('phone');
     var address = document.getElementById('address');
-
+    if (cart.length == 0){
+        alert('購物車是空的！');
+        return;
+    }
     if (username.value.trim() === '' || phone.value.trim() === '' || address.value.trim() === '') {
         alert('請填寫購買人資訊！');
         return;
     }
 
-    // 處理資料
+    // 儲存已購買人的資料（給 buyNow 用）
+    saveduser = username.value
+    savedphone = phone.value
+    savedaddr = address.value
+
+    // 成功購買的動畫
     var end = document.createElement('img');
     end.id = 'end';
     end.src = 'src/onlinestore/succeed.png';
     end.style.animation = 'cartend 3s ease';
     end.style.animationPlayState = 'paused';
-
     setTimeout(function(){
         end.style.animationPlayState = 'running';
         // end.remove();
@@ -176,7 +182,6 @@ function clearTheCart() {
     for (var i = 0 ; i < cart.length ; i++){
         allPrice += cart[i].Ptotalprice;
         console.log(allPrice);
-
         // 移除
         var current = document.getElementsByClassName('cart-row')[i];
         current.getElementsByClassName('cart-img')[0].innerHTML = '';
@@ -207,4 +212,30 @@ function clearTheCart() {
     console.log('Phone:', phone.value);
     console.log('Address:', address.value);
     allPrice = 0;
+}
+
+function buyNow() {
+    saveduser = document.getElementById('customer').value;
+    savedphone = document.getElementById('phone').value;
+    savedaddr = document.getElementById('address').value;
+
+    var price = document.querySelector("#price span");
+    price = parseInt(price.innerText);
+    var amount = document.getElementById('amount').value;
+    if (amount == 0){
+        alert('尚未選取數量！');
+        return;
+    }
+    if (saveduser.trim() === '' || savedphone.trim() === '' || savedaddr.trim() === '') {
+        alert('請在購物車下方填寫購買人資訊，再回來按立即購買');
+        return;
+    }
+
+    // 購買成功訊息
+    var message = '購買成功！\n\n' +
+              '姓名: ' + saveduser + '\n' +
+              '電話: ' + savedphone + '\n' +
+              '地址: ' + savedaddr + '\n' +
+              '\n總價: ' + (price*amount);
+    alert(message);
 }

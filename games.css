@@ -32,15 +32,137 @@
     object-fit: cover; /* 這裡可以嘗試 'cover' 或 'contain' */
     opacity: 0.8;
 }
-.games-mask {
+/**/
+
+/* 遊戲遮罩 */
+.games-mask1 {
     position: absolute;
     width: 100%;
     height: 100%;
+    /* background-color: white;
+    opacity: 0.5; */
+    overflow:hidden;
+    transition: 1s ease;
+}
+.games-mask1 img {
+    position:absolute;
+    width: 100%;
+    height: auto;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+    filter: saturate(-50%);
+    -webkit-filter: saturate(-50%);
+}
+.games-title-mask1 {
+    position: absolute;
     background-color: white;
     opacity: 0.5;
-    z-index: 300;
+    border-radius: 30px;
+    width: 60%;
+    height: 20%;
+    padding: 10px;
+    top: 25%;
+    left: 35%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
 }
-/**/
+.games-title1 {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 30px;
+    font-size: 8vw;
+    font-weight: 600;
+    color: #eacd76;
+    padding: 10px;
+    top: 25%;
+    left: 38%;
+    user-select:none;
+    -webkit-user-select:none;
+}
+.games-mask1 button {
+    position: absolute;
+    width: 30%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 4vw;
+    border-radius: 20px;
+    top: 60%;
+    left: 50%;
+    transition: 0.5s ease;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+}
+.games-mask1 button:hover {
+    transform-origin: 50% 50%;
+    transform: scale(1.1);
+    background-color: #7393B3;
+}
+.games-mask2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: white;
+    opacity: 0.5; */
+    overflow:hidden;
+    transition: 1s ease;
+}
+.games-mask2 img {
+    position:absolute;
+    width: 100%;
+    height: auto;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+    filter: saturate(-50%);
+    -webkit-filter: saturate(-50%);
+}
+.games-title-mask2 {
+    position: absolute;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 30px;
+    width: 50%;
+    height: 20%;
+    padding: 10px;
+    top: 25%;
+    left: 50%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+.games-title2 {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 30px;
+    font-size: 8vw;
+    font-weight: 600;
+    color: #eacd76;
+    padding: 10px;
+    top: 25%;
+    left: 48%;
+    user-select:none;
+    -webkit-user-select:none;
+}
+.games-mask2 button {
+    position: absolute;
+    width: 30%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 4vw;
+    border-radius: 20px;
+    top: 60%;
+    left: 50%;
+    transition: 0.5s ease;
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+}
+.games-mask2 button:hover {
+    transform-origin: 50% 50%;
+    transform: scale(1.1);
+    background-color: #ffc18c;
+    color: #F0FFFF;
+    border-color: #F0FFFF;
+}
 
 /* 遊戲1：射箭 */
 #dart {
@@ -71,7 +193,6 @@
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
     user-select:none; /* standard syntax */
     -webkit-user-select:none; /* for Chrome、Safari */
 }
@@ -164,12 +285,11 @@
     width: 10%;
     height: 5%;
     border-radius: 10px;
-    background-color: darkslategray;
-    color: wheat;
+    background-color: wheat;
+    color: darkslategray;
     top: 50%;
     left: 90%;
     transform: translate(-50%, -50%);
-    z-index: 2;
     user-select:none; /* standard syntax */
     -webkit-user-select:none; /* for Chrome、Safari */
 }
@@ -177,6 +297,20 @@
     transition: 0.5s;
     background-color: #232941;
     color:white;
+}
+.countdown {
+    position: absolute;
+    color: #ffc18c;
+    opacity: 0.8;
+    width: 60%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 12vw;
+    text-align: center;
+    align-content: center;
 }
 #ready {
     position: absolute;
@@ -192,7 +326,8 @@
     left: 37%;
     transform-origin: 0% 0%;
     /* transform: translate(-50%, -100%);   60 + 45 */
-    animation: ballFalling 1s ease-in forwards;
+    animation: ballFalling 1s ease-in;
+    animation-play-state: paused;
 }
 #target2 {
     position: absolute;
@@ -272,3 +407,84 @@
     0% {left: }
 } */
 
+/* 排行榜 */
+#leaderboard {
+    position: relative;
+    /* padding: 5%; */
+    background-image: url('src/games/leaderboard.jpg');
+    background-size: 100% auto; /* 背景圖片寬度 100%，高度自動調整 */
+    background-repeat: repeat-y; /* 垂直重複 */
+    background-position: center; /* 背景圖片居中 */
+    color: #232941;
+    width: 100%;
+    min-height: 600px; /* 最小高度为 600px */
+    display: flex;
+    flex-direction: column;
+}
+/* 父元素随着子元素的增加而增加高度 */
+#leaderboard > * {
+    flex-grow: 1;
+}
+#leadwin {
+    position: absolute;
+    border-radius: 40px;
+    background-color: wheat;
+    color: darkslategray;
+    width: 40%;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#leadwin form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+}
+#leadwin form label, #leadwin form input {
+    width: 50%;
+    align-self: center;
+}
+#submit {
+    position: absolute;
+    background-color: darkslategray;
+    color: wheat;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    padding: 4px;
+}
+#submit:hover {
+    background-color: #232941;
+    color: white;
+}
+.lead {
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5%;
+    border: 5px solid #232941;
+}
+.lead .cap {
+    font-weight: bold;
+    font-size: 3vw; 
+}
+.lead th{
+    border-bottom: 2px solid #232941;
+    font-size: 2vw;
+}
+.lead .user {
+    font-size: 2vw;
+    color: linen;
+    text-align: center;
+}
+.lead .user-score {
+    font-size: 2vw;
+    color: linen;
+    text-align: center;
+}

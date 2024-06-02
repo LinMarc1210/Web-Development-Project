@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
-    <script src="games.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>     <!--載入 jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 </head>
@@ -36,6 +35,7 @@
         <nav>
             <a href="#1" class="fas">射箭：挑戰金牌之路</a>
             <a href="#2" class="fas">羽毛球：Last Dance</a>
+            <a href="#leaderboard" class="fas">Leaderboard</a>
         </nav>
     </div>
 
@@ -49,7 +49,6 @@
             <div id="shooting" onclick="shoot()">Shoot !</div>
             <div id="score1">Score: <span>0</span></div>
             <div id="end"></div>
-            <!-- <div class="games-mask"></div> -->
         </div>
         <div class="games-rule">
             <img id="character1" class="character" src="src/games/character1.png">
@@ -60,6 +59,12 @@
                 </p>
             </div>
         </div>
+        <div id="games-mask1" class="games-mask1">
+            <img src="src/games/mask1.png">
+            <div class="games-title-mask1"></div>
+            <span class="games-title1"><span>Road To Gold</span></span>
+            <button onclick="startGame1()">Start Game</button>
+        </div>
     </div>
     <div id="2" class="games-container">
         <div class="games-board">
@@ -69,9 +74,12 @@
             <img id="ball" src="src/games/ball.png">
             <img id="target2" src="src/games/target.png">
             <!-- <img id="direction" src="src/games/direction.png"> -->
-            <div id="hitting" onclick="hit()">Hit !</div>
+            <div id="hitting" onclick="hit()">Ready ?</div>
             <div id="score2">Score: <span>0</span></div>
             <div id="end2"></div>
+            <div id="countdown3" class="countdown" hidden>3</div>
+            <div id="countdown2" class="countdown" hidden>2</div>
+            <div id="countdown1" class="countdown" hidden>1</div>
             <!-- <div class="games-mask"></div> -->
         </div>
         <div class="games-rule">
@@ -83,9 +91,39 @@
                 </p>
             </div>
         </div>
+        <div id="games-mask2" class="games-mask2">
+            <img src="src/games/mask2.jpg">
+            <div class="games-title-mask2"></div>
+            <div class="games-title2"><span>Last Dance</span></div>
+            <button onclick="startGame2()">Start Game</button>
+        </div>
+    </div>
+    <div id="leaderboard">
+        <div id="leadwin">
+            <form>
+                <label>你的名字：<input id="inputname" type="text"></label>
+                <button type="button" id="submit">送出</button>
+            </form>
+        </div>
+        <div id="hideitem" hidden>
+            <h1>LEADERBOARD</h1>
+            <table id="game1" class="lead">
+                <tr><td class="cap" colspan = "2" align="center" >射箭：挑戰金牌之路
+                <tr id="header1">
+                    <th>玩家
+                    <th>Score
+            </table>
+            <table id="game2" class="lead">
+                <tr><td class="cap" colspan = "2"  align="center">羽毛球：Last Dance
+                <tr id="header2">
+                    <th>玩家
+                    <th>Score
+            </table>
+        </div>
     </div>
 </div>
     
     <div class="scroll_back"><a href="#top"><img src="src/goback.png" width="70px"></a></div>
+    <script src="games.js"></script>
 </body>
 </html>

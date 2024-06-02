@@ -1,3 +1,7 @@
+var leader1 = [];
+var leader2 = [];
+var playername = 'Anonymous';
+
 var totalScore = 0;
 var scoreArray = [0, 0, 0, 0, 0, 0];
 var count = 0;
@@ -38,6 +42,18 @@ function shoot() {
         else{
             end.text('點點點');
         }
+        // 加到排行榜（每次都重新清空 + 寫入）
+        leader1.push(totalScore);
+        leader1.sort((a, b) => a - b);      // 升序
+        console.log(leader1);
+        var rows = $('#header1 ~ tr');
+        rows.remove();
+        for (var i = leader1.length - 1 ; i >= 0 ; i--){   // 最後面是最高分
+            var table = $('#game1');
+            var newRow = $('<tr>' + '<td class="user">' + playername + '</td><td class="user-score">' + leader1[i] + '</td></tr>');
+            table.append(newRow);
+        }
+
         count = 0;
         return;
     }
@@ -125,19 +141,22 @@ var fallingAnimation = [
     `ballFalling 4s ease forwards`,          // 4秒，默认缓动
 ];
 function hit(){
-
-    console.log(count2);
-    if (count2 == 0){
-        restartBadminton();
-    }
-
     var dai = document.getElementById('ready');
     var dai_jq = $('#ready');
     var ball = $('#ball');
     var target = $('#target2');
     var newball = $('<img id="ball" src="src/games/ball.png">');
     var button = $('#hitting');
+    console.log(count2);
 
+    if (button.text() === 'Ready ?'){
+        startBallFalling();
+        console.log(button.text());
+        return;
+    }
+    if (count2 == 0){
+        restartBadminton();
+    }
     if (count2 >= 10){
         button.text('Restart');
 
@@ -145,12 +164,24 @@ function hit(){
         if (totalScore2 >= 46){
             end.text('要拿金牌了');
         }
-        else if (totalScore2 >= 30){
+        else if (totalScore2 >= 25){
             end.text('美賣喔');
         } 
         else{
-            end.text('菜就多練');
+            end.text('繼續加油...');
         }
+        // 加到排行榜（每次都重新清空 + 寫入）
+        leader2.push(totalScore2);
+        leader2.sort((a, b) => a - b);      // 升序
+        console.log(leader2);
+        var rows = $('#header2 ~ tr');
+        rows.remove();
+        for (var i = leader2.length - 1 ; i >= 0 ; i--){   // 最後面是最高分
+            var table = $('#game2');
+            var newRow = $('<tr>' + '<td class="user">' + playername + '</td><td class="user-score">' + leader2[i] + '</td></tr>');
+            table.append(newRow);
+        }
+
         count2 = 0;
         return;
     }
@@ -264,7 +295,7 @@ function restartBadminton(){
     var end = $('#end2');
     var scoreBar = $('#score2 span');
     var button = $('#hitting');
-    button.text('Hit !');
+    button.text('Ready ?');
     end.text('');
     scoreBar.html('0');
 }
@@ -325,4 +356,60 @@ function ruleText2() {
         p.animate({"opacity": "1"}, 500);
     });
     nowIndex2++;
+}
+
+function startGame1(){
+    var div = document.getElementById('games-mask1');
+    div.style.opacity = '0';
+    setTimeout(function(){div.remove();}, 1000);
+}
+function startGame2(){
+    var div = document.getElementById('games-mask2');
+    var ball = document.getElementById('ball');
+    ball.style.animationPlayState = 'paused';
+    div.style.opacity = '0';
+    setTimeout(function(){div.remove();}, 1000);
+}
+function startBallFalling(){
+    var ball = document.getElementById('ball');
+    var button = document.getElementById('hitting');
+    var c3 = document.getElementById('countdown3');
+    var c2 = document.getElementById('countdown2');
+    var c1 = document.getElementById('countdown1');
+    button.removeAttribute('onclick');
+
+    // 倒計時是累積的
+    setTimeout(function(){
+        c3.style.display = 'flex';
+    }, 1000);
+    setTimeout(function(){
+        c3.style.display = 'none';
+        c2.style.display = 'flex';
+    }, 2000);
+    setTimeout(function(){
+        c2.style.display = 'none';
+        c1.style.display = 'flex';
+    }, 3000);
+    setTimeout(function(){
+        c1.style.display = 'none';
+        button.innerHTML = 'Hit !';
+        // 要寫在裡面，才會是 4 秒後
+        ball.style.animationPlayState = 'running';
+        button.setAttribute('onclick', 'hit()');
+    }, 4000);   
+}
+
+document.getElementById('submit').addEventListener('click', changeName);
+function changeName(){
+    var name = document.getElementById('inputname');
+    playername = name.value;
+    console.log(playername)
+    var ele = document.querySelectorAll('.user');
+    ele.forEach(element => {
+        element.innerHTML = playername;
+    });
+    var div = document.getElementById('hideitem');
+    var lead = document.getElementById('leadwin');
+    lead.remove();
+    div.hidden = false;
 }

@@ -52,7 +52,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
     font: 48px consolas;
     color: azure;
     white-space: nowrap;
@@ -98,8 +98,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.85;
-    z-index: 1;
+    /* opacity: 0.85; */
 }
 .sports .pictogram {
     transition: 1s ease-in;
@@ -112,7 +111,7 @@
 .sports .pictogram:hover {
     transition: 1s ease-out;
     opacity: 1;
-    z-index: 2;
+    border-radius: 10px;
 }
 #archery {
     top: 12.5%;
@@ -153,6 +152,60 @@
 #weightlifting {
     top: 77.5%;
     left: 64.75%;
+}
+#info-container {
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    border-radius: 20px;
+    background-color:rgba(131, 122, 92, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#info-container h1 {
+    position: absolute;
+    color: linen;
+    width: 80%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#info-img {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+#info-img img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    object-fit: cover;
+}
+#info-img hr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#info-img p {
+    position: absolute;
+    width: 80%;
+    top: 52%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: rgb(252, 245, 238);
+}
+#close {
+    position: absolute;
+    width: 5%;
+    right: 2%;
+    top: 2%;
 }
 /**/
 
