@@ -34,3 +34,17 @@ function pre(c, listClass, photoClass) {
     return c;
 }
 /*到這裡結束*/
+
+/*點讚*/
+function like(num,icon){
+    var picture;
+    if(icon==0){
+        picture="heart_"
+    }
+    else{
+        picture="bad_"
+    }
+    var id_str=picture+num;
+    var element=document.getElementById(id_str);
+    element.innerHTML=parseInt(element.innerHTML)+1;
+}

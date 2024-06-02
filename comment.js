@@ -14,7 +14,7 @@ function upload(){
     $('#box').append(ele);
     
     var min=118;
-    var max=158;
+    var max=150;
     var randomHeight = (Math.floor(Math.random() * ( max- min + 1)) + min)*10; 
     var randomWidth = (Math.floor(Math.random() * (boxWidth - 1 + 1)));
     
